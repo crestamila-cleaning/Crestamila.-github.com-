@@ -282,3 +282,9 @@ document.addEventListener("click", (e) => {
     closeBtn.closest(".modal")?.classList.remove("is-open");
   }
 });
+// close mobile menu when clicking links
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("menu-open");
+  });
+});
