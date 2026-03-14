@@ -147,12 +147,12 @@ const i18n = {
     svc_cta: "Request a quote →",
 
     svc_home_title: "Residential cleaning",
-    svc_home_price: "From €25/hour",
+    svc_home_price: "From €30/hour",
     svc_home_text:
       "Fresh and tidy, with clear agreements. Ideal for weekly, bi-weekly or one-off.",
 
     svc_office_title: "Office cleaning",
-    svc_office_price: "From €30/hour",
+    svc_office_price: "From €40/hour",
     svc_office_text:
       "A calm, clean workplace — flexibly scheduled around your opening hours.",
     svc_office_micro: "Visit frequency: 1×/wk • 2×/wk • 3×/wk+",
@@ -162,7 +162,7 @@ const i18n = {
     svc_deep_text: "Intensive and thorough cleaning for visible results.",
 
     svc_vve_title: "VvE (entrance & stairwell)",
-    svc_vve_price: "From €30/hour",
+    svc_vve_price: "From €/hour",
     svc_vve_text: "For shared spaces such as entrance, stairs and floors.",
     svc_vve_micro: "Usually: weekly or bi-weekly",
 
@@ -171,7 +171,7 @@ const i18n = {
     svc_windows_text: "Streak-free windows and frames, inside or outside.",
 
     svc_build_title: "Move-out / post-build cleaning",
-    svc_build_price: "From €30/hour",
+    svc_build_price: "From €45/hour",
     svc_build_text: "After renovation or moving: dust, residue and detail work.",
 
     services_prices_btn: "See pricing details",
