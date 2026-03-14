@@ -1,21 +1,18 @@
-// ===== Year
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// ===== Simple i18n
 const i18n = {
   nl: {
-    brand_tag: "Maastricht & Limburg",
+    brand_sub: "Maastricht & Limburg",
     nav_services: "Diensten",
     nav_about: "Over ons",
     nav_gallery: "Foto’s",
     nav_contact: "Contact",
-    btn_prices: "Tarieven",
+    btn_quote: "Offerte",
 
     hero_pill: "Maastricht • Limburg • Eco-vriendelijk",
     hero_title: "Professionele schoonmaak voor woningen, kantoren en VvE’s.",
-    hero_subtitle:
-      "Betrouwbare schoonmaak met duidelijke afspraken, flexibele planning en een nette oplevering.",
+    hero_subtitle: "Betrouwbare schoonmaak met duidelijke afspraken, flexibele planning en een nette oplevering.",
     hero_cta_quote: "Vraag een offerte",
     hero_cta_whatsapp: "WhatsApp ons",
     hero_check_1: "Betrouwbaar & discreet",
@@ -38,13 +35,11 @@ const i18n = {
 
     svc_home_title: "Woning schoonmaak",
     svc_home_price: "Vanaf €25/uur",
-    svc_home_text:
-      "Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.",
+    svc_home_text: "Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.",
 
     svc_office_title: "Kantoor schoonmaak",
     svc_office_price: "Vanaf €30/uur",
-    svc_office_text:
-      "Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.",
+    svc_office_text: "Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.",
     svc_office_micro: "Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+",
 
     svc_deep_title: "Deep Cleaning",
@@ -65,14 +60,11 @@ const i18n = {
     svc_build_text: "Na verbouwing of verhuizing: stof, resten en detailwerk.",
 
     services_prices_btn: "Bekijk tariefuitleg",
-    services_prices_note:
-      "Tarieven zijn richtprijzen. Definitieve prijs altijd via offerte.",
+    services_prices_note: "Tarieven zijn richtprijzen. Definitieve prijs altijd via offerte.",
 
     about_title: "Over Crestamila",
-    about_p1:
-      "Wij zijn een schoonmaakservice actief in Maastricht en heel Limburg. We staan voor kwaliteit, betrouwbaarheid en duidelijke afspraken.",
-    about_p2:
-      "Of het nu gaat om een woning, kantoor of een VvE: we maken een plan dat past bij jouw ruimte en jouw ritme.",
+    about_p1: "Wij zijn een schoonmaakservice actief in Maastricht en heel Limburg. We staan voor kwaliteit, betrouwbaarheid en duidelijke afspraken.",
+    about_p2: "Of het nu gaat om een woning, kantoor of een VvE: we maken een plan dat past bij jouw ruimte en jouw ritme.",
     stat_1_n: "Eco",
     stat_1_t: "Bewuste middelen",
     stat_2_n: "Flex",
@@ -83,8 +75,7 @@ const i18n = {
 
     gallery_title: "Foto’s",
     gallery_subtitle: "Een kleine indruk van ons werk en onze diensten.",
-    gallery_note:
-      "Deze foto’s geven een realistische indruk van ons werk. Elke locatie is anders en wordt met zorg behandeld.",
+    gallery_note: "Deze foto’s geven een realistische indruk van ons werk. Elke locatie is anders en wordt met zorg behandeld.",
 
     contact_title: "Contact",
     contact_sub: "Werkgebied: Maastricht & Limburg",
@@ -115,17 +106,16 @@ const i18n = {
   },
 
   en: {
-    brand_tag: "Maastricht & Limburg",
+    brand_sub: "Maastricht & Limburg",
     nav_services: "Services",
     nav_about: "About",
     nav_gallery: "Photos",
     nav_contact: "Contact",
-    btn_prices: "Pricing",
+    btn_quote: "Quote",
 
     hero_pill: "Maastricht • Limburg • Eco-friendly",
     hero_title: "Professional cleaning for homes, offices and VvE buildings.",
-    hero_subtitle:
-      "Reliable cleaning with clear agreements, flexible planning and a neat finish.",
+    hero_subtitle: "Reliable cleaning with clear agreements, flexible planning and a neat finish.",
     hero_cta_quote: "Request a quote",
     hero_cta_whatsapp: "WhatsApp us",
     hero_check_1: "Reliable & discreet",
@@ -133,95 +123,7 @@ const i18n = {
     hero_check_3: "Eco products",
     hero_fastcontact: "Quick contact",
     hero_region_k: "Region:",
-    hero_fastnote: "We usually respond the same day.",
-
-    val1_t: "Eco conscious",
-    val1_d: "We use eco-friendly products whenever possible.",
-    val2_t: "Tailored",
-    val2_d: "Weekly, bi-weekly or one-off.",
-    val3_t: "Clear",
-    val3_d: "Clear agreements and a tidy finish.",
-
-    services_title: "Services",
-    services_subtitle: "For homes, businesses and VvE buildings in Maastricht and Limburg.",
-    svc_cta: "Request a quote →",
-
-    svc_home_title: "Residential cleaning",
-    svc_home_price: "From €25/hour",
-    svc_home_text:
-      "Fresh and tidy, with clear agreements. Ideal for weekly, bi-weekly or one-off.",
-
-    svc_office_title: "Office cleaning",
-    svc_office_price: "From €30/hour",
-    svc_office_text:
-      "A calm, clean workplace — flexibly scheduled around your opening hours.",
-    svc_office_micro: "Visit frequency: 1×/wk • 2×/wk • 3×/wk+",
-
-    svc_deep_title: "Deep cleaning",
-    svc_deep_price: "From €45/hour (min. 3 hours)",
-    svc_deep_text: "Intensive and thorough cleaning for visible results.",
-
-    svc_vve_title: "VvE (entrance & stairwell)",
-    svc_vve_price: "From €30/hour",
-    svc_vve_text: "For shared spaces such as entrance, stairs and floors.",
-    svc_vve_micro: "Usually: weekly or bi-weekly",
-
-    svc_windows_title: "Window cleaning",
-    svc_windows_price: "From €35/hour",
-    svc_windows_text: "Streak-free windows and frames, inside or outside.",
-
-    svc_build_title: "Move-out / post-build cleaning",
-    svc_build_price: "From €30/hour",
-    svc_build_text: "After renovation or moving: dust, residue and detail work.",
-
-    services_prices_btn: "See pricing details",
-    services_prices_note:
-      "Rates are indicative. Final price is always confirmed via a quote.",
-
-    about_title: "About Crestamila",
-    about_p1:
-      "We are a cleaning service active in Maastricht and throughout Limburg. We stand for quality, reliability and clear agreements.",
-    about_p2:
-      "Whether it is a home, office or a VvE building: we create a plan that fits your space and rhythm.",
-    stat_1_n: "Eco",
-    stat_1_t: "Conscious products",
-    stat_2_n: "Flex",
-    stat_2_t: "Flexible schedule",
-    stat_3_n: "Top",
-    stat_3_t: "Neat result",
-    about_note: "Professional • Reliable • Discreet",
-
-    gallery_title: "Photos",
-    gallery_subtitle: "A small impression of our work and services.",
-    gallery_note:
-      "These photos give a realistic impression of our work. Every location is different and treated with care.",
-
-    contact_title: "Contact",
-    contact_sub: "Service area: Maastricht & Limburg",
-    quote_title: "Request a quote",
-    form_name: "Name",
-    form_phone: "Phone",
-    form_service: "Service",
-    form_msg: "Message",
-    form_send: "Send",
-    form_note: "After the first time, you will receive a confirmation email from FormSubmit.",
-
-    opt_home: "Residential cleaning",
-    opt_office: "Office cleaning",
-    opt_deep: "Deep Cleaning",
-    opt_vve: "VvE (entrance & stairwell)",
-    opt_windows: "Window cleaning",
-    opt_build: "Move-out / post-build cleaning",
-
-    modal_pricing_title: "Pricing — transparent & realistic",
-    modal_pricing_p1: "Our rates are hourly guidelines. The final price depends on:",
-    modal_pricing_li1: "Size of the space",
-    modal_pricing_li2: "Condition of the property",
-    modal_pricing_li3: "Cleaning frequency",
-    modal_pricing_li4: "Accessibility and arrangements",
-    modal_pricing_li5: "Extra requests",
-    modal_pricing_p2: "We always confirm a clear quote first.",
-    modal_pricing_cta: "Request a quote"
+    hero_fastnote: "We usually respond the same day."
   }
 };
 
