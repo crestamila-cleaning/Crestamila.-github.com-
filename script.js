@@ -35,34 +35,35 @@ const i18n = {
     services_title: "Diensten",
     services_subtitle: "Voor particulieren, bedrijven en VvE’s in Maastricht en Limburg.",
     svc_cta: "Offerte aanvragen →",
+nl: {
 
-    svc_home_title: "Woning schoonmaak",
-    svc_home_price: "Vanaf €30/uur",
-    svc_home_text:
-      "Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.",
+svc_home_title: "Woning schoonmaak",
+svc_home_price: "Vanaf €30/uur",
+svc_home_text: "Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.",
 
-    svc_office_title: "Kantoor schoonmaak",
-    svc_office_price: "Vanaf €40/uur",
-    svc_office_text:
-      "Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.",
-    svc_office_micro: "Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+",
+svc_office_title: "Kantoor schoonmaak",
+svc_office_price: "Vanaf €40/uur",
+svc_office_text: "Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.",
+svc_office_micro: "Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+",
 
-    svc_deep_title: "Deep Cleaning",
-    svc_deep_price: "Vanaf €45/uur (min. 3 uur)",
-    svc_deep_text: "Intensief en grondig schoonmaken voor zichtbaar resultaat.",
+svc_deep_title: "Deep Cleaning",
+svc_deep_price: "Vanaf €45/uur",
+svc_deep_text: "Intensief en grondig schoonmaken voor zichtbaar resultaat.",
 
-    svc_vve_title: "VvE (entree & trappenhuis)",
-  ,
-    svc_vve_text: "Voor gezamenlijke ruimtes zoals entree, trappen en vloeren.",
-    svc_vve_micro: "Meestal: wekelijks of 2-wekelijks",
+svc_vve_title: "VvE (entree & trappenhuis)",
+svc_vve_price: "",
+svc_vve_text: "Voor gezamenlijke ruimtes zoals entree, trappen en vloeren.",
+svc_vve_micro: "Meestal: wekelijks of 2-wekelijks",
 
-    svc_windows_title: "Glazenwasser",
-    svc_windows_price: "Vanaf €35/uur",
-    svc_windows_text: "Streeploze ramen en kozijnen, binnen of buiten.",
+svc_windows_title: "Glazenwasser",
+svc_windows_price: "Vanaf €35/uur",
+svc_windows_text: "Streeploze ramen en kozijnen, binnen of buiten.",
 
-    svc_build_title: "Oplevering / Bouwschoonmaak",
-    svc_build_price: "Vanaf €45/uur",
-    svc_build_text: "Na verbouwing of verhuizing: stof, resten en detailwerk.",
+svc_build_title: "Oplevering / Bouwschoonmaak",
+svc_build_price: "Vanaf €45/uur",
+svc_build_text: "Na verbouwing of verhuizing: stof, resten en detailwerk.",
+},
+
 
     services_prices_btn: "Bekijk tariefuitleg",
     services_prices_note:
@@ -146,34 +147,34 @@ const i18n = {
     services_subtitle: "For homes, businesses and VvE buildings in Maastricht and Limburg.",
     svc_cta: "Request a quote →",
 
-    svc_home_title: "Residential cleaning",
-    svc_home_price: "From €25/hour",
-    svc_home_text:
-      "Fresh and tidy, with clear agreements. Ideal for weekly, bi-weekly or one-off.",
+    en: {
 
-    svc_office_title: "Office cleaning",
-    svc_office_price: "From €30/hour",
-    svc_office_text:
-      "A calm, clean workplace — flexibly scheduled around your opening hours.",
-    svc_office_micro: "Visit frequency: 1×/wk • 2×/wk • 3×/wk+",
+svc_home_title: "Residential cleaning",
+svc_home_price: "From €30/hour",
+svc_home_text: "Fresh and tidy, with clear agreements. Ideal for weekly, bi-weekly or one-off.",
 
-    svc_deep_title: "Deep cleaning",
-    svc_deep_price: "From €45/hour (min. 3 hours)",
-    svc_deep_text: "Intensive and thorough cleaning for visible results.",
+svc_office_title: "Office cleaning",
+svc_office_price: "From €40/hour",
+svc_office_text: "A calm, clean workplace — flexibly scheduled around your opening hours.",
+svc_office_micro: "Visit frequency: 1×/wk • 2×/wk • 3×/wk+",
 
-    svc_vve_title: "VvE (entrance & stairwell)",
-    svc_vve_price: "From €30/hour",
-    svc_vve_text: "For shared spaces such as entrance, stairs and floors.",
-    svc_vve_micro: "Usually: weekly or bi-weekly",
+svc_deep_title: "Deep cleaning",
+svc_deep_price: "From €45/hour",
+svc_deep_text: "Intensive and thorough cleaning for visible results.",
 
-    svc_windows_title: "Window cleaning",
-    svc_windows_price: "From €35/hour",
-    svc_windows_text: "Streak-free windows and frames, inside or outside.",
+svc_vve_title: "VvE (entrance & stairwell)",
+svc_vve_price: "",
+svc_vve_text: "For shared spaces such as entrance, stairs and floors.",
+svc_vve_micro: "Usually: weekly or bi-weekly",
 
-    svc_build_title: "Move-out / post-build cleaning",
-    svc_build_price: "From €30/hour",
-    svc_build_text: "After renovation or moving: dust, residue and detail work.",
+svc_windows_title: "Window cleaning",
+svc_windows_price: "From €35/hour",
+svc_windows_text: "Streak-free windows and frames, inside or outside.",
 
+svc_build_title: "Move-out / post-build cleaning",
+svc_build_price: "From €45/hour",
+svc_build_text: "After renovation or moving: dust, residue and detail work.",
+}
     services_prices_btn: "See pricing details",
     services_prices_note:
       "Rates are indicative. Final price is always confirmed via a quote.",
