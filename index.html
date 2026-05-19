@@ -2,31 +2,34 @@
 <html lang="nl">
 
 <head>
-<title>Crestamila Cleaning Service | Maastricht, Limburg & omgeving</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Professionele schoonmaak in Maastricht, Limburg en omliggende steden zoals Heerlen, Sittard, Roermond en Valkenburg. Voor woningen, kantoren en VvE's.">
+<title>Crestamila Cleaning Service | Maastricht & Limburg</title>
 
-<meta name="keywords" content="schoonmaak Maastricht, schoonmaak Limburg, cleaning Maastricht, cleaning Limburg, schoonmaak bedrijf Maastricht, kantoor schoonmaak Limburg, VvE schoonmaak Limburg">
+<meta name="description" content="Professionele schoonmaak in Maastricht, Limburg en omliggende regio's zoals Heerlen, Sittard, Roermond en Valkenburg.">
+<meta name="keywords" content="schoonmaak Maastricht, schoonmaak Limburg, cleaning Maastricht, cleaning Limburg, schoonmaakbedrijf Limburg">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-white text-gray-900">
 
 <!-- NAVBAR -->
-<nav class="bg-white shadow-md fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
 
     <img src="logo.png" class="h-12" alt="logo">
 
-    <div class="hidden md:flex items-center gap-8 font-medium">
+    <div class="hidden md:flex gap-8 items-center font-medium">
 
-      <a href="#services">Diensten</a>
+      <a href="#services">Services</a>
       <a href="#about">Over ons</a>
       <a href="#gallery">Galerij</a>
       <a href="#contact">Contact</a>
-
-      <!-- LANGUAGE -->
-      <div class="flex items-center gap-2 border-l pl-4 text-sm">
-        <button onclick="setLang('nl')">NL</button>
-        <span>|</span>
-        <button onclick="setLang('en')">EN</button>
-      </div>
 
     </div>
 
@@ -34,29 +37,25 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4">
+<section class="pt-28 pb-20 bg-gray-100 text-center px-4">
 
-  <div class="max-w-4xl pt-28">
+  <h1 class="text-3xl md:text-5xl font-bold">
+    Professionele Schoonmaakdiensten
+  </h1>
 
-    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-      Professional Cleaning Services
-    </h1>
+  <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+    Actief in Maastricht, Limburg en omliggende regio’s.
+  </p>
 
-    <p class="mt-6 text-base sm:text-lg text-gray-200">
-      Reliable cleaning for homes, offices and buildings in Limburg.
-    </p>
+  <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
 
-    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="#contact" class="bg-green-500 text-white px-6 py-3 rounded-xl">
+      Offerte aanvragen
+    </a>
 
-      <a href="#contact" class="bg-green-500 px-8 py-4 rounded-xl font-semibold">
-        Offerte aanvragen
-      </a>
-
-      <a href="https://wa.me/31624545080" class="bg-white text-black px-8 py-4 rounded-xl font-semibold">
-        WhatsApp
-      </a>
-
-    </div>
+    <a href="https://wa.me/31624545080" class="bg-black text-white px-6 py-3 rounded-xl">
+      WhatsApp
+    </a>
 
   </div>
 
@@ -65,55 +64,53 @@
 <!-- SERVICES -->
 <section id="services" class="py-20 px-4">
 
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto text-center">
 
-<h2 class="text-3xl md:text-4xl font-bold text-center">
-Onze Diensten
-</h2>
+<h2 class="text-3xl font-bold">Onze Diensten</h2>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
 
 <!-- 1 -->
-<div class="card bg-white rounded-2xl shadow overflow-hidden">
-<img src="home-cleaning.jpg" class="w-full h-56 object-cover">
+<div class="bg-white shadow rounded-2xl overflow-hidden">
+<img src="house-cleaning.jpg" class="w-full h-52 object-cover">
 <div class="p-5">
 <h3>Woning schoonmaak</h3>
-<p class="price">€35/u</p>
+<p class="text-green-600 font-bold">€35/u</p>
 </div>
 </div>
 
 <!-- 2 -->
-<div class="card bg-white rounded-2xl shadow overflow-hidden">
-<img src="office-cleaning.jpg" class="w-full h-56 object-cover">
+<div class="bg-white shadow rounded-2xl overflow-hidden">
+<img src="office-cleaning.jpg" class="w-full h-52 object-cover">
 <div class="p-5">
 <h3>Kantoor schoonmaak</h3>
-<p class="price">€40/u</p>
+<p class="text-green-600 font-bold">€40/u</p>
 </div>
 </div>
 
 <!-- 3 -->
-<div class="card bg-white rounded-2xl shadow overflow-hidden">
-<img src="deep-cleaning.jpg" class="w-full h-56 object-cover">
+<div class="bg-white shadow rounded-2xl overflow-hidden">
+<img src="deep-cleaning.jpg" class="w-full h-52 object-cover">
 <div class="p-5">
 <h3>Deep Cleaning</h3>
-<p class="price">€45/u</p>
+<p class="text-green-600 font-bold">€45/u</p>
 </div>
 </div>
 
 <!-- 4 -->
-<div class="card bg-white rounded-2xl shadow overflow-hidden">
-<img src="vve-cleaning.jpg" class="w-full h-56 object-cover">
+<div class="bg-white shadow rounded-2xl overflow-hidden">
+<img src="vve-cleaning.jpg" class="w-full h-52 object-cover">
 <div class="p-5">
 <h3>VvE Schoonmaak</h3>
 </div>
 </div>
 
 <!-- 5 -->
-<div class="card bg-white rounded-2xl shadow overflow-hidden">
-<img src="moveout-cleaning.jpg" class="w-full h-56 object-cover">
+<div class="bg-white shadow rounded-2xl overflow-hidden">
+<img src="moveout-cleaning.jpg" class="w-full h-52 object-cover">
 <div class="p-5">
 <h3>Oplevering / Bouwschoonmaak</h3>
-<p class="price">€55/u</p>
+<p class="text-green-600 font-bold">€55/u</p>
 </div>
 </div>
 
@@ -124,38 +121,38 @@ Onze Diensten
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 px-4 bg-white text-gray-800 text-center">
+<section id="about" class="py-20 bg-gray-50 text-center px-4">
 
-<h2 class="text-3xl md:text-4xl font-bold">Over ons</h2>
+<h2 class="text-3xl font-bold">Over ons</h2>
 
-<p class="max-w-3xl mx-auto mt-6 text-gray-700 leading-8">
-Wij leveren professionele schoonmaakdiensten in Maastricht, Limburg en omliggende regio’s zoals Heerlen, Sittard, Roermond en Valkenburg. Wij staan voor kwaliteit, betrouwbaarheid en professionele service.
+<p class="max-w-3xl mx-auto mt-6 text-gray-700 leading-7">
+Wij leveren professionele schoonmaakdiensten in Maastricht, Limburg en omliggende steden zoals Heerlen, Sittard, Roermond en Valkenburg. Wij staan voor kwaliteit, betrouwbaarheid en een perfect resultaat.
 </p>
 
 </section>
+
 <!-- GALLERY -->
 <section id="gallery" class="py-20 px-4">
 
 <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-<img src="gallery3.jpg" class="rounded-2xl shadow w-full h-72 object-cover">
-<img src="gallery4.jpg" class="rounded-2xl shadow w-full h-72 object-cover">
-<img src="gallery6.jpg" class="rounded-2xl shadow w-full h-72 object-cover">
+<img src="gallery3.jpg" class="rounded-2xl shadow object-cover h-72 w-full">
+<img src="gallery4.jpg" class="rounded-2xl shadow object-cover h-72 w-full">
+<img src="gallery6.jpg" class="rounded-2xl shadow object-cover h-72 w-full">
 
 </div>
 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-4 bg-gray-50">
+<section id="contact" class="py-20 bg-gray-100 px-4">
 
 <div class="max-w-3xl mx-auto">
 
-<h2 class="text-3xl md:text-4xl font-bold text-center">Contact</h2>
+<h2 class="text-3xl font-bold text-center">Contact</h2>
 
-<form action="https://api.web3forms.com/submit"
-method="POST"
-class="bg-white p-6 sm:p-10 rounded-2xl shadow mt-10 space-y-5">
+<form action="https://api.web3forms.com/submit" method="POST"
+class="bg-white p-6 md:p-10 rounded-2xl shadow mt-10 space-y-5">
 
 <input type="hidden" name="access_key" value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
 
@@ -165,7 +162,7 @@ class="bg-white p-6 sm:p-10 rounded-2xl shadow mt-10 space-y-5">
 
 <textarea name="message" placeholder="Bericht" class="w-full p-4 border rounded-xl h-40" required></textarea>
 
-<button class="w-full bg-green-500 text-white p-4 rounded-xl font-semibold">
+<button class="w-full bg-green-500 text-white py-4 rounded-xl font-semibold">
 Versturen
 </button>
 
@@ -174,20 +171,19 @@ Versturen
 </div>
 
 </section>
+
 <!-- FOOTER -->
 <footer class="bg-black text-white text-center py-10">
 
-<p>© 2025 Crestamila Cleaning</p>
+<p>© 2025 Crestamila Cleaning Service</p>
 
 </footer>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/31624545080"
-class="fixed bottom-6 right-6 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+class="fixed bottom-6 right-6 bg-green-500 w-14 h-14 flex items-center justify-center rounded-full text-white text-2xl shadow-lg">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
-
-<script src="script.js"></script>
 
 </body>
 </html>
