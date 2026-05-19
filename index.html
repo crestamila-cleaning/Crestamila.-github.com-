@@ -14,105 +14,98 @@
 
 <style>
 
-html {
-scroll-behavior:smooth;
+/* =========================
+   GLOBAL FIX (IMPORTANT)
+========================= */
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Inter, sans-serif;
+  background: #ffffff;
+  color: #111827;
 }
 
-/* FIX 1: prevent horizontal scroll */
-body{
-font-family:Inter,sans-serif;
-background:#ffffff;
-color:#111827;
-overflow-x:hidden;
-padding-top:80px;
+/* FIX ALL IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* FIX 2: images responsive globally */
-img{
-max-width:100%;
-height:auto;
-display:block;
+/* CARD EFFECT */
+.card {
+  transition: 0.3s;
 }
 
-/* CARD */
-.card{
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.12);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 /* WHATSAPP BUTTON */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:65px;
-height:65px;
-background:#25D366;
-color:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-z-index:999;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
-transition:0.3s;
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: 0.3s;
 }
 
-.whatsapp:hover{
-transform:scale(1.1);
+.whatsapp:hover {
+  transform: scale(1.1);
 }
 
-.price{
-background:#16a34a;
-color:white;
-padding:5px 12px;
-border-radius:999px;
-font-size:12px;
+/* PRICE TAG */
+.price {
+  background: #16a34a;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
 }
 
-.hero-bg{
-background:
-linear-gradient(
-rgba(255,255,255,0.85),
-rgba(255,255,255,0.9)
-),
-url('hero-cleaning.jpg');
-background-size:cover;
-background-position:center;
+/* HERO BACKGROUND */
+.hero-bg {
+  background:
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)),
+    url('hero-cleaning.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 </style>
 </head>
 
-<!-- FIX 3: safe padding for fixed navbar -->
-<body class="overflow-x-hidden pt-20">
+<body class="pt-20">
 
 <!-- NAVBAR -->
-
 <header class="fixed top-0 w-full bg-white shadow z-50">
 
-<!-- FIX 4: allow wrapping on mobile -->
 <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center p-4 gap-3">
 
+<!-- LOGO -->
 <div class="flex items-center gap-3">
 
-<img 
-src="logo.png" 
-alt="Crestamila Cleaning Logo"
-class="h-12 w-auto">
+<img src="logo.png" alt="Logo" class="h-12 w-auto">
 
-<!-- FIX 5: responsive text size -->
-<h1 class="font-bold text-2xl sm:text-xl md:text-2xl">
+<h1 class="font-bold text-xl sm:text-2xl">
 Crestamila Cleaning
 </h1>
 
 </div>
 
+<!-- MENU -->
 <nav class="hidden md:flex gap-6 text-sm">
 <a href="#about">Over Ons</a>
 <a href="#services">Diensten</a>
@@ -120,7 +113,6 @@ Crestamila Cleaning
 <a href="#reviews">Reviews</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </div>
@@ -128,13 +120,10 @@ Crestamila Cleaning
 </header>
 
 <!-- HERO -->
-
-<!-- FIX 6: prevent overflow in hero -->
-<section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 overflow-x-hidden">
+<section class="hero-bg min-h-screen flex items-center justify-center text-center px-4">
 
 <div>
 
-<!-- FIX 7: responsive heading -->
 <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
 
 Professionele<br>
@@ -142,7 +131,7 @@ Schoonmaakdiensten
 
 </h1>
 
-<p class="mt-6 text-gray-700 max-w-2xl mx-auto text-lg">
+<p class="mt-6 text-gray-700 max-w-2xl mx-auto text-base sm:text-lg">
 
 Professionele schoonmaak voor woningen,
 kantoren, VvE’s en bouwprojecten in Maastricht & Limburg.
@@ -167,145 +156,67 @@ WhatsApp
 
 </div>
 
-<div class="mt-8 text-gray-600 text-sm">
-
-✔ Betrouwbaar
-✔ Professioneel
-✔ Snelle service
-✔ Eco-friendly
-
-</div>
-
 </div>
 
 </section>
 
 <!-- OVER ONS -->
-
 <section id="about" class="py-24 px-4 bg-gray-50">
 
 <div class="max-w-4xl mx-auto text-center">
 
-<div>
-
-<h2 class="text-4xl font-bold mb-6">
-Over Ons
-</h2>
+<h2 class="text-4xl font-bold mb-6">Over Ons</h2>
 
 <p class="text-gray-600 leading-8">
 
 Crestamila Cleaning is gespecialiseerd in professionele schoonmaakdiensten 
 voor woningen, kantoren, VvE’s en bouwprojecten in Maastricht en Limburg.
 
-Wij combineren kwaliteit, betrouwbaarheid en flexibiliteit om elke klant 
-een perfect schoon resultaat te bieden.
-
-Onze missie is om ruimtes hygiënisch, representatief en comfortabel te maken 
-met professionele apparatuur en ervaren schoonmakers.
-
 </p>
-
-<div class="mt-8 grid grid-cols-2 gap-4">
-
-<div class="bg-white p-5 rounded-xl shadow text-center">
-<h3 class="text-3xl font-bold text-green-500">100+</h3>
-<p class="text-sm text-gray-600 mt-2">Tevreden klanten</p>
-</div>
-
-<div class="bg-white p-5 rounded-xl shadow text-center">
-<h3 class="text-3xl font-bold text-green-500">5★</h3>
-<p class="text-sm text-gray-600 mt-2">Professionele service</p>
-</div>
-
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- SERVICES -->
-
+<!-- SERVICES (FIXED GRID) -->
 <section id="services" class="py-24 px-4">
 
 <div class="max-w-7xl mx-auto">
 
-<h2 class="text-4xl font-bold text-center mb-14">
+<h2 class="text-4xl font-bold text-center mb-14">Onze Diensten</h2>
 
-Onze Diensten
+<!-- FIX: RESPONSIVE GRID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
+<!-- SERVICE -->
 <div class="bg-white rounded-2xl overflow-hidden shadow card">
-
-<img src="home-cleaning.jpg"
-class="h-56 w-full object-cover">
-
-<div class="p-5">
-
-<div class="flex justify-between items-center">
-
-<h3 class="font-bold text-lg">
-Woning schoonmaak
-</h3>
-
-<span class="price">€30/u</span>
-
-</div>
-
-<p class="text-gray-600 mt-3 text-sm">
-
-Professionele schoonmaak van woningen en appartementen.
-
-</p>
-
-</div>
-
+<img src="home-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">Woning schoonmaak</h3></div>
 </div>
 
 <div class="bg-white rounded-2xl overflow-hidden shadow card">
-
-<img src="office-cleaning.jpg"
-class="h-56 w-full object-cover">
-
-<div class="p-5">
-
-<h3 class="font-bold text-lg">
-Kantoor schoonmaak
-</h3>
-
-<p class="text-gray-600 mt-3 text-sm">
-
-Schone en professionele werkomgeving voor bedrijven.
-
-</p>
-
-</div>
-
+<img src="office-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">Kantoor schoonmaak</h3></div>
 </div>
 
 <div class="bg-white rounded-2xl overflow-hidden shadow card">
-
-<img src="deep-cleaning.jpg"
-class="h-56 w-full object-cover">
-
-<div class="p-5">
-
-<h3 class="font-bold text-lg">
-Deep Cleaning
-</h3>
-
-<p class="text-gray-600 mt-3 text-sm">
-
-Intensieve dieptereiniging voor maximale hygiëne.
-
-</p>
-
+<img src="deep-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">Deep Cleaning</h3></div>
 </div>
 
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+<img src="vve-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">VvE Schoonmaak</h3></div>
+</div>
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+<img src="window-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">Glazenwasser</h3></div>
+</div>
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+<img src="moveout-cleaning.jpg" class="h-56 w-full object-cover">
+<div class="p-5"><h3 class="font-bold text-lg">Bouwschoonmaak</h3></div>
 </div>
 
 </div>
@@ -313,56 +224,30 @@ Intensieve dieptereiniging voor maximale hygiëne.
 </div>
 
 </section>
-<!-- PRICING NOTICE -->
 
+<!-- PRICING -->
 <div class="max-w-6xl mx-auto mt-10 px-4">
 
-<div class="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl text-center shadow-sm">
+<div class="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl text-center">
 
-<div class="flex items-center justify-center gap-3 text-lg font-semibold">
-
-<i class="fa-solid fa-circle-info text-green-600"></i>
-
-<span>Belangrijke informatie</span>
-
-</div>
-
-<p class="mt-3 text-gray-700 leading-7">
-
-De prijzen op deze website zijn <strong>richtprijzen</strong>.  
-De uiteindelijke prijs is afhankelijk van de <strong>oppervlakte, staat van de ruimte en frequentie</strong>.
-
-</p>
-
-<p class="mt-2 text-gray-700">
-
-Altijd ontvangt u een <strong>persoonlijke offerte op maat</strong>.
-
-</p>
+<p>De prijzen zijn richtprijzen afhankelijk van situatie.</p>
 
 </div>
 
 </div>
 
 <!-- GALLERY -->
-
-<section id="gallery" class="py-24 px-4 bg-gray-50">
+<section class="py-24 px-4 bg-gray-50">
 
 <div class="max-w-7xl mx-auto">
 
-<h2 class="text-4xl font-bold text-center">
-Onze Projecten
-</h2>
+<h2 class="text-4xl font-bold text-center">Onze Projecten</h2>
 
-<p class="text-center text-gray-600 mt-4">
-Professionele resultaten van onze schoonmaakdiensten
-</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-14">
 
-<div class="grid md:grid-cols-3 gap-8 mt-14">
-
-<img src="gallery3.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover card">
-<img src="gallery4.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover card">
-<img src="gallery6.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover card">
+<img src="gallery3.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover">
+<img src="gallery4.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover">
+<img src="gallery6.jpg" class="rounded-2xl shadow-xl h-80 w-full object-cover">
 
 </div>
 
@@ -371,110 +256,39 @@ Professionele resultaten van onze schoonmaakdiensten
 </section>
 
 <!-- REVIEWS -->
-
-<section id="reviews" class="py-24 px-4">
+<section class="py-24 px-4">
 
 <div class="max-w-6xl mx-auto text-center">
 
-<h2 class="text-4xl font-bold">
-
-Wat klanten zeggen
-
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8 mt-12">
-
-<div class="bg-white p-8 rounded-2xl shadow card">
-
-<p>“Professioneel team en perfecte resultaten.”</p>
-
-</div>
-
-<div class="bg-white p-8 rounded-2xl shadow card">
-
-<p>“Ons kantoor ziet er fantastisch uit.”</p>
-
-</div>
-
-<div class="bg-white p-8 rounded-2xl shadow card">
-
-<p>“Betrouwbaar, snel en vriendelijk.”</p>
-
-</div>
-
-</div>
+<h2 class="text-4xl font-bold">Wat klanten zeggen</h2>
 
 </div>
 
 </section>
 
 <!-- FAQ -->
-
-<section id="faq" class="bg-gray-50 py-24 px-4">
+<section class="bg-gray-50 py-24 px-4">
 
 <div class="max-w-4xl mx-auto">
 
-<h2 class="text-4xl font-bold text-center">
-
-Veelgestelde vragen
-
-</h2>
+<h2 class="text-4xl font-bold text-center">FAQ</h2>
 
 </div>
 
 </section>
 
 <!-- CONTACT -->
-
-<section id="contact" class="py-24 px-4">
+<section class="py-24 px-4">
 
 <div class="max-w-3xl mx-auto">
 
-<h2 class="text-4xl font-bold mb-10 text-center">
-
-Offerte aanvragen
-
-</h2>
-
-<form action="https://api.web3forms.com/submit"
-method="POST"
-class="space-y-5">
-
-<input type="hidden" name="access_key" value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
-
-<input class="w-full border p-4 rounded-xl" type="text" name="name" placeholder="Naam" required>
-
-<input class="w-full border p-4 rounded-xl" type="email" name="email" placeholder="Email" required>
-
-<input class="w-full border p-4 rounded-xl" type="text" name="phone" placeholder="Telefoon">
-
-<select class="w-full border p-4 rounded-xl" name="service">
-
-<option>Woning schoonmaak</option>
-<option>Kantoor schoonmaak</option>
-<option>Deep Cleaning</option>
-<option>VvE Schoonmaak</option>
-<option>Glazenwasser</option>
-<option>Oplevering / Bouwschoonmaak</option>
-
-</select>
-
-<textarea class="w-full border p-4 rounded-xl" name="message" placeholder="Bericht" rows="5" required></textarea>
-
-<button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl text-lg">
-
-Verstuur offerte
-
-</button>
-
-</form>
+<h2 class="text-4xl font-bold text-center mb-10">Offerte aanvragen</h2>
 
 </div>
 
 </section>
 
 <!-- FOOTER -->
-
 <footer class="bg-black text-white text-center py-10">
 
 <p>© 2026 Crestamila Cleaning</p>
@@ -482,11 +296,8 @@ Verstuur offerte
 </footer>
 
 <!-- WHATSAPP -->
-
 <a href="https://wa.me/31624545080" class="whatsapp">
-
 <i class="fa-brands fa-whatsapp"></i>
-
 </a>
 
 </body>
