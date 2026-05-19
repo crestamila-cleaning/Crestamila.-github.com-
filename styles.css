@@ -960,3 +960,23 @@ img {
   display:block;
   object-fit:contain;
   }
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container, .max-w-6xl, .max-w-7xl {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: auto;
+}
+
+section {
+  overflow-x: hidden;
+}
