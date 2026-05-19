@@ -1,471 +1,201 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crestamila Cleaning Service | Schoonmaakbedrijf Maastricht & Limburg</title>
-  <meta
-    name="description"
-    content="Professionele schoonmaak voor woningen, kantoren en VvE’s in Maastricht en Limburg. Vraag eenvoudig een offerte aan via WhatsApp of contactformulier."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body id="top">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top">
-        <img src="logo.png" alt="Crestamila logo" class="brand-logo" />
-        <span class="brand-text">
-          <span class="brand-name">Crestamila</span>
-          <span class="brand-sub" data-i18n="brand_tag">Maastricht & Limburg</span>
-        </span>
-      </a>
+<title>Crestamila Cleaning | Maastricht & Limburg</title>
+
+<meta name="description" content="Professionele schoonmaakdiensten in Maastricht & Limburg. Woningen, kantoren en VvE's. Vraag direct een offerte aan." />
+
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
-<nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
-      
-      <div class="flex-shrink-0 flex items-center">
-        <a href="#" class="text-2xl font-bold tracking-wider text-gray-800 flex items-center gap-2">
-          <span class="text-emerald-500"><i class="fa-solid fa-sparkles"></i></span> CRESTAMILA
-        </a>
-      </div>
+<style>
+body { font-family: Inter, sans-serif; }
+.fade { transition: all .3s ease; }
+.card:hover { transform: translateY(-5px); }
+</style>
+</head>
 
-      <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
-        <a href="#services" data-i18n="nav_services" class="hover:text-emerald-500 transition-colors">Diensten</a>
-        <a href="#about" data-i18n="nav_about" class="hover:text-emerald-500 transition-colors">Over ons</a>
-        <a href="#gallery" data-i18n="nav_gallery" class="hover:text-emerald-500 transition-colors">Foto's</a>
-        <a href="#contact" data-i18n="nav_contact" class="hover:text-emerald-500 transition-colors">Contact</a>
-        
-        <button type="button" data-modal-open="#pricingModal" data-i18n="nav_tarieven" class="bg-emerald-500 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 transition-all shadow-md hover:shadow-emerald-200 font-bold">Tarieven</button>
-        
-        <div class="lang-switch flex gap-2 items-center border-l pl-4 ml-2 border-gray-200" aria-label="Language switcher">
-          <button class="lang_btn is-active text-sm font-bold" type="button" data-lang="nl">NL</button>
-          <span class="text-gray-300">|</span>
-          <button class="lang_btn text-sm font-bold text-gray-400 hover:text-gray-600" type="button" data-lang="en">EN</button>
-        </div>
-      </div>
+<body class="bg-white text-gray-800">
 
-      <div class="md:hidden flex items-center gap-4">
-        <div class="lang-switch flex gap-2 items-center mr-2" aria-label="Language switcher">
-          <button class="lang_btn is-active text-sm font-bold" type="button" data-lang="nl">NL</button>
-          <button class="lang_btn text-sm font-bold text-gray-400" type="button" data-lang="en">EN</button>
-        </div>
-        <button id="mobile-menu-btn" class="text-gray-700 hover:text-emerald-500 focus:outline-none text-2xl transition-transform duration-200">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </button>
-      </div>
+<!-- NAV -->
+<header class="fixed w-full top-0 bg-white shadow z-50">
+<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-    </div>
-  </div>
+<h1 class="font-bold text-xl">Crestamila</h1>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg absolute w-full left-0 transition-all duration-300 transform origin-top scale-y-95 opacity-0">
-    <a href="#services" data-i18n="nav_services" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Diensten</a>
-    <a href="#about" data-i18n="nav_about" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Over ons</a>
-    <a href="#gallery" data-i18n="nav_gallery" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Foto's</a>
-    <a href="#contact" data-i18n="nav_contact" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Contact</a>
-    <button type="button" data-modal-open="#pricingModal" data-i18n="nav_tarieven" class="w-full text-center bg-emerald-500 text-white py-3 rounded-xl font-bold shadow-md hover:bg-emerald-600 transition-colors">Tarieven</button>
-  </div>
+<nav class="hidden md:flex gap-6 text-sm">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<script>
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if(menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => {
-          mobileMenu.classList.remove('scale-y-95', 'opacity-0');
-          mobileMenu.classList.add('scale-y-100', 'opacity-100');
-        }, 10);
-        menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-      } else {
-        mobileMenu.classList.add('scale-y-95', 'opacity-0');
-        mobileMenu.classList.remove('scale-y-100', 'opacity-100');
-        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-        menuBtn.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
-      }
-    });
-  }
-</script>
-      
-        
-
-</body>
-
-    </div>
-  </header>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="hero-pill" data-i18n="hero_pill">Maastricht • Limburg • Eco-vriendelijk</span>
-        <h1 data-i18n="hero_title">Professionele schoonmaak voor woningen, kantoren en VvE’s.</h1>
-        <p data-i18n="hero_subtitle">
-          Betrouwbare schoonmaak met duidelijke afspraken, flexibele planning en een nette oplevering.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_quote">Vraag een offerte</a>
-          <a
-            href="https://wa.me/31624545080?text=Hallo,%20ik%20wil%20graag%20een%20offerte%20voor%20schoonmaak."
-            class="btn btn-ghost"
-            target="_blank"
-            rel="noopener"
-            data-i18n="hero_cta_whatsapp"
-          >
-            WhatsApp ons
-          </a>
-        </div>
-
-        <div class="hero-checks">
-          <span data-i18n="hero_check_1">Betrouwbaar & discreet</span>
-          <span data-i18n="hero_check_2">Flexibele planning</span>
-          <span data-i18n="hero_check_3">Eco-producten</span>
-        </div>
-
-        <div class="hero-contact-box">
-          <strong data-i18n="hero_fastcontact">Snel contact</strong>
-          <p data-i18n="hero_fastnote">We reageren meestal dezelfde dag.</p>
-          <p><strong data-i18n="hero_region_k">Regio:</strong> Maastricht & Limburg</p>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <img src="hero-cleaning.jpg" alt="Professionele schoonmaak in woning" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-soft">
-    <div class="container values-grid">
-      <div class="value-card">
-        <h3 data-i18n="val1_t">Milieubewust</h3>
-        <p data-i18n="val1_d">We gebruiken waar mogelijk eco-vriendelijke middelen.</p>
-      </div>
-      <div class="value-card">
-        <h3 data-i18n="val2_t">Op maat</h3>
-        <p data-i18n="val2_d">Wekelijks, tweewekelijks of eenmalig.</p>
-      </div>
-      <div class="value-card">
-        <h3 data-i18n="val3_t">Duidelijk</h3>
-        <p data-i18n="val3_d">Heldere afspraken en nette oplevering.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="services_title">Diensten</h2>
-        <p data-i18n="services_subtitle">
-          Voor particulieren, bedrijven en VvE’s in Maastricht en Limburg.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <img src="home-cleaning.jpg" alt="Woning schoonmaak" class="service-img" />
-          <div class="service-body">
-            <div class="service-top">
-              <h3 data-i18n="svc_home_title">Woning schoonmaak</h3>
-              <span class="price-tag" data-i18n="svc_home_price">Vanaf €30/uur</span>
-            </div>
-            <p data-i18n="svc_home_text">
-              Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.
-            </p>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="office-cleaning.jpg" alt="Kantoor schoonmaak" class="service-img" />
-          <div class="service-body">
-            <div class="service-top">
-              <h3 data-i18n="svc_office_title">Kantoor schoonmaak</h3>
-              <span class="price-tag" data-i18n="svc_office_price">Vanaf €40/uur</span>
-            </div>
-            <p data-i18n="svc_office_text">
-              Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.
-            </p>
-            <small data-i18n="svc_office_micro">Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+</small>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="deep-cleaning.jpg" alt="Deep cleaning" class="service-img" />
-          <div class="service-body">
-            <div class="service-top">
-              <h3 data-i18n="svc_deep_title">Deep Cleaning</h3>
-              <span class="price-tag" data-i18n="svc_deep_price">Vanaf €45/uur (min. 3 uur)</span>
-            </div>
-            <p data-i18n="svc_deep_text">Intensief en grondig schoonmaken voor zichtbaar resultaat.</p>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="vve-cleaning.jpg" alt="VvE schoonmaak" class="service-img" />
-          <div class="service-body">
-            <div class="service-top">
-              <h3 data-i18n="svc_vve_title">VvE (entree & trappenhuis)</h3>
-              <span class="price-tag" data-i18n="svc_vve_"svc_vve_price">Vanaf/uur</span>
-            </div>
-            
-            <p data-i18n="svc_vve_text">
-              Voor gezamenlijke ruimtes zoals entree, trappen en vloeren.
-            </p>
-            <small data-i18n="svc_vve_micro">Meestal: wekelijks of 2-wekelijks</small>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="window-cleaning.jpg" alt="Glazenwasser" class="service-img" />
-          <div class="service-body">
-            <div class="service-top">
-              <h3 data-i18n="svc_windows_title">Glazenwasser</h3>
-              <span class="price-tag" data-i18n="svc_windows_price">Vanaf €35/uur</span>
-            </div>
-            <p data-i18n="svc_windows_text">Streeploze ramen en kozijnen, binnen of buiten.</p>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="moveout-cleaning.jpg" alt="Oplevering schoonmaak" class="service-img" />
-          <div class="service-body">
-            <form action="https://formsubmit.co/info@crestamilacleaning.nl" method="POST">
-            <div class="service-top">
-              <h3 data-i18n="svc_build_title">Oplevering / Bouwschoonmaak</h3>
-              <span class="price-tag" data-i18n="svc_build_price">Vanaf €45/uur</span>
-            </div>
-            <p data-i18n="svc_build_text">Na verbouwing of verhuizing: stof, resten en detailwerk.</p>
-          </div>
-          <div class="service-footer">
-            <a href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="pricing-hint">
-        <button class="btn btn-ghost" type="button" data-modal-open="#pricingModal" data-i18n="services_prices_btn">
-          Bekijk tariefuitleg
-        </button>
-        <span data-i18n="services_prices_note">
-          Tarieven zijn richtprijzen. Definitieve prijs altijd via offerte.
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section section-soft">
-    <div class="container about-grid">
-      <div class="about-box">
-        <h2 data-i18n="about_title">Over Crestamila</h2>
-        <p data-i18n="about_p1">
-          Wij zijn een schoonmaakservice actief in Maastricht en heel Limburg. We staan voor kwaliteit, betrouwbaarheid en duidelijke afspraken.
-        </p>
-        <p data-i18n="about_p2">
-          Of het nu gaat om een woning, kantoor of een VvE: we maken een plan dat past bij jouw ruimte en jouw ritme.
-        </p>
-
-        <div class="about-stats">
-          <div class="stat">
-            <strong data-i18n="stat_1_n">Eco</strong>
-            <span data-i18n="stat_1_t">Bewuste middelen</span>
-          </div>
-          <div class="stat">
-            <strong data-i18n="stat_2_n">Flex</strong>
-            <span data-i18n="stat_2_t">Flexibel schema</span>
-          </div>
-          <div class="stat">
-            <strong data-i18n="stat_3_n">Top</strong>
-            <span data-i18n="stat_3_t">Net resultaat</span>
-          </div>
-        </div>
-
-        <div class="about-note" data-i18n="about_note">Professioneel • Betrouwbaar • Discreet</div>
-      </div>
-
-      <div class="about-media">
-        <img src="team.jpg" alt="Crestamila team aan het werk" />
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2 data-i18n="gallery_title">Foto’s</h2>
-        <p data-i18n="gallery_subtitle">Een kleine indruk van ons werk en onze diensten.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <img src="gallery3.jpg" alt="Schoonmaak foto 3" />
-        <img src="gallery4.jpg" alt="Schoonmaak foto 4" />
-        <img src="gallery6.jpg" alt="Schoonmaak foto 6" />
-      </div>
-
-      <p class="gallery-note" data-i18n="gallery_note">
-        Deze foto’s geven een realistische indruk van ons werk. Elke locatie is anders en wordt met zorg behandeld.
-      </p>
-    </div>
-  </section>
-
-<section id="contact" class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto">
-    
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight" data-i18n="contact_title">Contact</h2>
-      <p class="mt-4 text-lg text-gray-500 max-w-xl mx-auto" data-i18n="contact_sub">
-        Werkgebied: Maastricht & Limburg
-      </p>
-    </div>
-
-    <div class="bg-white rounded-3xl shadow-xl shadow-gray-100/70 border border-gray-100 p-8 sm:p-12 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200/50">
-      
-      <form action="https://formsubmit.co/crestamila.cleaning@gmail.com" method="POST" class="space-y-6">
-        
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag - Crestamila">
-        <input type="hidden" name="_template" value="table">
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="space-y-2">
-            <label class="block text-sm font-semibold text-gray-700">
-              <span data-i18n="form_name">Naam</span> <span class="text-red-500">*</span>
-            </label>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
-                <i class="fa-regular fa-user"></i>
-              </span>
-              <input type="text" name="name" required class="block w-full pl-11 pr-4 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
-            </div>
-          </div>
-
-          <div class="space-y-2">
-            <label class="block text-sm font-semibold text-gray-700">
-              <span data-i18n="form_phone">Telefoon</span> <span class="text-red-500">*</span>
-            </label>
-            <div class="relative">
-              <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
-                <i class="fa-regular fa-phone"></i>
-              </span>
-              <input type="text" name="phone" required class="block w-full pl-11 pr-4 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <label class="block text-sm font-semibold text-gray-700">
-            <span data-i18n="form_service">Service</span> <span class="text-red-500">*</span>
-          </label>
-          <div class="relative">
-            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none">
-              <i class="fa-regular fa-sparkles"></i>
-            </span>
-            <select name="service" required class="block w-full pl-11 pr-10 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
-              <option value="" disabled selected data-i18n="opt_home">Kies een service</option>
-              <option value="Woning schoonmaak" data-i18n="opt_home">Woning schoonmaak</option>
-              <option value="Kantoor schoonmaak" data-i18n="opt_office">Kantoor schoonmaak</option>
-              <option value="Deep Cleaning" data-i18n="opt_deep">Deep Cleaning</option>
-              <option value="VvE (entree & trappenhuis)" data-i18n="opt_vve">VvE (entree & trappenhuis)</option>
-              <option value="Glazenwasser" data-i18n="opt_windows">Glazenwasser</option>
-              <option value="Oplevering / Bouwschoonmaak" data-i18n="opt_build">Oplevering / Bouwschoonmaak</option>
-            </select>
-            <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 pointer-events-none">
-              <i class="fa-solid fa-chevron-down text-xs"></i>
-            </span>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <label class="block text-sm font-semibold text-gray-700">
-            <span data-i18n="form_msg">Bericht</span> <span class="text-red-500">*</span>
-          </label>
-          <textarea name="message" rows="5" required class="block w-full px-5 py-4 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200 resize-none"></textarea>
-        </div>
-
-        <p class="text-xs text-gray-400 italic" data-i18n="form_note">
-          Na eerste keer ontvang je een bevestigingsmail van FormSubmit.
-        </p>
+<div class="flex gap-2 text-sm">
+<button onclick="setLang('nl')">NL</button>
+<button onclick="setLang('en')">EN</button>
+</div>
 
 </div>
-  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-28 pb-20 bg-gradient-to-r from-green-50 to-gray-50 text-center">
+<h1 class="text-4xl md:text-5xl font-bold" data-i18n="hero_title">
+Professionele schoonmaak in Maastricht & Limburg
+</h1>
+
+<p class="mt-4 text-gray-600 max-w-xl mx-auto" data-i18n="hero_sub">
+Betrouwbare schoonmaak voor woningen, kantoren en bedrijven.
+</p>
+
+<div class="mt-6 flex justify-center gap-4">
+<a href="#contact" class="bg-green-500 text-white px-6 py-3 rounded-full">
+Offerte aanvragen
+</a>
+
+<a href="https://wa.me/31624545080" target="_blank"
+class="bg-black text-white px-6 py-3 rounded-full">
+WhatsApp
+</a>
+</div>
+
+<div class="mt-8 text-sm text-gray-500">
+✔ Snelle service • ✔ Eco-producten • ✔ 100% betrouwbaar
+</div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="max-w-6xl mx-auto py-20 px-4">
+<h2 class="text-3xl font-bold text-center mb-10">Onze Diensten</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-white shadow rounded-xl p-6 card fade">
+<h3 class="font-bold">Woning schoonmaak</h3>
+<p class="text-sm text-gray-600 mt-2">Professionele schoonmaak voor huizen.</p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 card fade">
+<h3 class="font-bold">Kantoor schoonmaak</h3>
+<p class="text-sm text-gray-600 mt-2">Schone en productieve werkruimtes.</p>
+</div>
+
+<div class="bg-white shadow rounded-xl p-6 card fade">
+<h3 class="font-bold">Deep cleaning</h3>
+<p class="text-sm text-gray-600 mt-2">Diepe reiniging met resultaat.</p>
+</div>
+
+</div>
 </section>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <img src="logo.png" alt="Crestamila logo" class="footer-logo" />
-    <p>&copy; <span id="year"></span> Crestamila Cleaning Service – Maastricht & Limburg</p>
-  </div>
+<!-- BEFORE / AFTER -->
+<section class="bg-gray-50 py-20 text-center px-4">
+<h2 class="text-3xl font-bold">Voor & Na Resultaten</h2>
+
+<div class="max-w-4xl mx-auto mt-8 grid md:grid-cols-2 gap-6">
+
+<img src="gallery3.jpg" class="rounded-xl shadow" />
+<img src="gallery4.jpg" class="rounded-xl shadow" />
+
+</div>
+
+<p class="text-gray-500 mt-6">
+Professionele resultaten zichtbaar in elke schoonmaak.
+</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 max-w-4xl mx-auto text-center px-4">
+<h2 class="text-3xl font-bold">Over ons</h2>
+
+<p class="mt-4 text-gray-600">
+Crestamila Cleaning is actief in Maastricht & Limburg en levert hoogwaardige schoonmaakdiensten met betrouwbaarheid en kwaliteit.
+</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-gray-50 py-20 px-4 text-center">
+<h2 class="text-3xl font-bold">Klanten zeggen</h2>
+
+<div class="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+<div class="bg-white p-6 rounded-xl shadow">
+"Super service en snelle communicatie!"
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+"Ons kantoor is altijd perfect schoon."
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+"Zeer professioneel team."
+</div>
+
+</div>
+  </section>
+  <!-- CONTACT -->
+<section id="contact" class="py-20 max-w-3xl mx-auto px-4">
+
+<h2 class="text-3xl font-bold mb-6">Offerte aanvragen</h2>
+
+<form action="https://formsubmit.co/crestamila.cleaning@gmail.com" method="POST" class="space-y-4">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input class="w-full border p-3 rounded" name="name" placeholder="Naam" required>
+
+<input class="w-full border p-3 rounded" name="phone" placeholder="Telefoon" required>
+
+<select class="w-full border p-3 rounded" name="service">
+<option>Woning schoonmaak</option>
+<option>Kantoor schoonmaak</option>
+<option>Deep cleaning</option>
+</select>
+
+<textarea class="w-full border p-3 rounded" name="message" placeholder="Bericht"></textarea>
+
+<button class="w-full bg-green-500 text-white py-3 rounded">
+Verstuur offerte
+</button>
+
+</form>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center py-10">
+© 2026 Crestamila Cleaning
 </footer>
-  <a
-    class="wa-float"
-    href="https://wa.me/31624545080?text=Hallo,%20ik%20wil%20graag%20een%20offerte%20voor%20schoonmaak."
-    target="_blank"
-    rel="noopener"
-    aria-label="WhatsApp"
-  >
-    <span class="wa-icon">💬</span>
-    <span class="wa-text">WhatsApp</span>
-  </a>
 
-  <div class="modal" id="pricingModal" aria-hidden="true">
-    <div class="modal-overlay" data-modal-close></div>
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3 data-i18n="modal_pricing_title">Tarieven — transparant & realistisch</h3>
-        <button class="modal-close" type="button" data-modal-close>×</button>
-      </div>
-      <div class="modal-body">
-        <p data-i18n="modal_pricing_p1">Onze tarieven zijn richtprijzen per uur. De definitieve prijs hangt af van:</p>
-        <ul>
-          <li data-i18n="modal_pricing_li1">Grootte van de ruimte</li>
-          <li data-i18n="modal_pricing_li2">Staat van het pand</li>
-          <li data-i18n="modal_pricing_li3">Frequentie van schoonmaak</li>
-          <li data-i18n="modal_pricing_li4">Bereikbaarheid en afspraken</li>
-          <li data-i18n="modal_pricing_li5">Extra wensen</li>
-        </ul>
-        <p data-i18n="modal_pricing_p2">We bevestigen altijd eerst een duidelijke offerte.</p>
-      </div>
-      <div class="modal-actions">
-        <a href="#contact" class="btn btn-primary" data-modal-close data-i18n="modal_pricing_cta">Offerte aanvragen</a>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-  <a href="https://wa.me/31624545080" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#20ba5a] hover:scale-110 active:scale-95 transition-all duration-300 group" aria-label="Chat via WhatsApp">
-  
-  <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:hidden"></span>
-  
-  <i class="fa-brands fa-whatsapp text-3xl relative z-10"></i>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/31624545080"
+class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg text-2xl">
+💬
 </a>
+
+<!-- LANGUAGE -->
+<script>
+const translations = {
+nl: {
+hero_title: "Professionele schoonmaak in Maastricht & Limburg",
+hero_sub: "Betrouwbare schoonmaak voor woningen, kantoren en bedrijven"
+},
+en: {
+hero_title: "Professional cleaning in Maastricht & Limburg",
+hero_sub: "Reliable cleaning for homes, offices and companies"
+}
+};
+
+function setLang(lang){
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+const key = el.getAttribute("data-i18n");
+if(translations[lang] && translations[lang][key]){
+el.innerText = translations[lang][key];
+}
+});
+}
+</script>
+
 </body>
 </html>
-        
