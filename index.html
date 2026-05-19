@@ -343,75 +343,94 @@
     </div>
   </section>
 
-  <section id="contact" class="section section-soft">
-    <div class="container contact-grid">
-      <div class="contact-box">
-        <h2 data-i18n="contact_title">Contact</h2>
-        <p data-i18n="contact_sub">Werkgebied: Maastricht & Limburg</p>
+<section id="contact" class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight" data-i18n="contact_title">Contact</h2>
+      <p class="mt-4 text-lg text-gray-500 max-w-xl mx-auto" data-i18n="contact_sub">
+        Werkgebied: Maastricht & Limburg
+      </p>
+    </div>
 
-        <div class="contact-links">
-          <a href="tel:+31624545080">📞 +31 6 24545080</a>
-          <a href="mailto:info@crestamilacleaning.nl">✉ info@crestamilacleaning.nl</a>
-          <a href="https://wa.me/31624545080?text=Hallo,%20ik%20wil%20graag%20een%20offerte%20voor%20schoonmaak." target="_blank" rel="noopener">
-            💬 WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <form
-        class="quote-form"
-        action="https://formsubmit.co/crestamila.cleaning@gmail.com"
-        method="POST"
-      >
-        <h3 data-i18n="quote_title">Offerte aanvragen</h3>
-
+    <div class="bg-white rounded-3xl shadow-xl shadow-gray-100/70 border border-gray-100 p-8 sm:p-12 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200/50">
+      
+      <form action="https://formsubmit.co/crestamila.cleaning@gmail.com" method="POST" class="space-y-6">
+        
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag - Crestamila Cleaning Service">
+        <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag - Crestamila">
         <input type="hidden" name="_template" value="table">
 
-        <label>
-          <span data-i18n="form_name">Naam</span>
-          <input type="text" name="name" required>
-        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              <span data-i18n="form_name">Naam</span> <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                <i class="fa-regular fa-user"></i>
+              </span>
+              <input type="text" name="name" required class="block w-full pl-11 pr-4 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
+            </div>
+          </div>
 
-        <label>
-          <span data-i18n="form_phone">Telefoon</span>
-          <input type="text" name="phone" required>
-        </label>
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              <span data-i18n="form_phone">Telefoon</span> <span class="text-red-500">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                <i class="fa-regular fa-phone"></i>
+              </span>
+              <input type="text" name="phone" required class="block w-full pl-11 pr-4 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
+            </div>
+          </div>
+        </div>
 
-        <label>
-          <span data-i18n="form_service">Service</span>
-          <select name="service" required>
-            <option value="" disabled selected>Kies een service</option>
-            <option data-i18n="opt_home">Woning schoonmaak</option>
-            <option data-i18n="opt_office">Kantoor schoonmaak</option>
-            <option data-i18n="opt_deep">Deep Cleaning</option>
-            <option data-i18n="opt_vve">VvE (entree & trappenhuis)</option>
-            <option data-i18n="opt_windows">Glazenwasser</option>
-            <option data-i18n="opt_build">Oplevering / Bouwschoonmaak</option>
-          </select>
-        </label>
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-gray-700">
+            <span data-i18n="form_service">Service</span> <span class="text-red-500">*</span>
+          </label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none">
+              <i class="fa-regular fa-sparkles"></i>
+            </span>
+            <select name="service" required class="block w-full pl-11 pr-10 py-3.5 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200">
+              <option value="" disabled selected data-i18n="opt_home">Kies een service</option>
+              <option value="Woning schoonmaak" data-i18n="opt_home">Woning schoonmaak</option>
+              <option value="Kantoor schoonmaak" data-i18n="opt_office">Kantoor schoonmaak</option>
+              <option value="Deep Cleaning" data-i18n="opt_deep">Deep Cleaning</option>
+              <option value="VvE (entree & trappenhuis)" data-i18n="opt_vve">VvE (entree & trappenhuis)</option>
+              <option value="Glazenwasser" data-i18n="opt_windows">Glazenwasser</option>
+              <option value="Oplevering / Bouwschoonmaak" data-i18n="opt_build">Oplevering / Bouwschoonmaak</option>
+            </select>
+            <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 pointer-events-none">
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </span>
+          </div>
+        </div>
 
-        <label>
-          <span data-i18n="form_msg">Bericht</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-gray-700">
+            <span data-i18n="form_msg">Bericht</span> <span class="text-red-500">*</span>
+          </label>
+          <textarea name="message" rows="5" required class="block w-full px-5 py-4 bg-gray-50/50 border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white transition-all duration-200 resize-none"></textarea>
+        </div>
 
-        <button class="btn btn-primary" type="submit" data-i18n="form_send">Versturen</button>
-        <p class="form-note" data-i18n="form_note">
+        <p class="text-xs text-gray-400 italic" data-i18n="form_note">
           Na eerste keer ontvang je een bevestigingsmail van FormSubmit.
         </p>
-      </form>
-    </div>
-  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <img src="logo.png" alt="Crestamila logo" class="footer-logo" />
-      <p>© <span id="year"></span> Crestamila Cleaning Service — Maastricht & Limburg</p>
-    </div>
-  </footer>
+</div>
+  </div>
+</section>
 
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="logo.png" alt="Crestamila logo" class="footer-logo" />
+    <p>&copy; <span id="year"></span> Crestamila Cleaning Service – Maastricht & Limburg</p>
+  </div>
+</footer>
   <a
     class="wa-float"
     href="https://wa.me/31624545080?text=Hallo,%20ik%20wil%20graag%20een%20offerte%20voor%20schoonmaak."
