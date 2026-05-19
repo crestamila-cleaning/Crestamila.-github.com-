@@ -28,39 +28,87 @@
           <span class="brand-sub" data-i18n="brand_tag">Maastricht & Limburg</span>
         </span>
       </a>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#services" data-i18n="nav_services">Diensten</a>
-        <a href="#about" data-i18n="nav_about">Over ons</a>
-        <a href="#gallery" data-i18n="nav_gallery">Foto’s</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-      </nav>
+<nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#" class="text-2xl font-bold tracking-wider text-gray-800 flex items-center gap-2">
+          <span class="text-emerald-500"><i class="fa-solid fa-sparkles"></i></span> CRESTAMILA
+        </a>
+      </div>
 
-      <div class="nav-actions">
-        <div class="lang-switch" aria-label="Language switcher">
-          <button class="lang__btn is-active" type="button" data-lang="nl">NL</button>
-          <button class="lang__btn" type="button" data-lang="en">EN</button>
+      <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+        <a href="#services" data-i18n="nav_services" class="hover:text-emerald-500 transition-colors">Diensten</a>
+        <a href="#about" data-i18n="nav_about" class="hover:text-emerald-500 transition-colors">Over ons</a>
+        <a href="#gallery" data-i18n="nav_gallery" class="hover:text-emerald-500 transition-colors">Foto's</a>
+        <a href="#contact" data-i18n="nav_contact" class="hover:text-emerald-500 transition-colors">Contact</a>
+        
+        <button type="button" data-modal-open="#pricingModal" data-i18n="nav_tarieven" class="bg-emerald-500 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 transition-all shadow-md hover:shadow-emerald-200 font-bold">Tarieven</button>
+        
+        <div class="lang-switch flex gap-2 items-center border-l pl-4 ml-2 border-gray-200" aria-label="Language switcher">
+          <button class="lang_btn is-active text-sm font-bold" type="button" data-lang="nl">NL</button>
+          <span class="text-gray-300">|</span>
+          <button class="lang_btn text-sm font-bold text-gray-400 hover:text-gray-600" type="button" data-lang="en">EN</button>
         </div>
+      </div>
 
-        <button class="btn btn-ghost menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
-
-        <button
-          class="btn btn-primary desktop-only"
-          type="button"
-          data-modal-open="#pricingModal"
-          data-i18n="btn_prices">
-          Tarieven
+      <div class="md:hidden flex items-center gap-4">
+        <div class="lang-switch flex gap-2 items-center mr-2" aria-label="Language switcher">
+          <button class="lang_btn is-active text-sm font-bold" type="button" data-lang="nl">NL</button>
+          <button class="lang_btn text-sm font-bold text-gray-400" type="button" data-lang="en">EN</button>
+        </div>
+        <button id="mobile-menu-btn" class="text-gray-700 hover:text-emerald-500 focus:outline-none text-2xl transition-transform duration-200">
+          <i class="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
-    </div>
 
-    <div class="mobile-nav" id="mobileNav">
-      <a href="#services" data-i18n="nav_services">Diensten</a>
-      <a href="#about" data-i18n="nav_about">Over ons</a>
-      <a href="#gallery" data-i18n="nav_gallery">Foto’s</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
-      <button
-        class="btn btn-primary"
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg absolute w-full left-0 transition-all duration-300 transform origin-top scale-y-95 opacity-0">
+    <a href="#services" data-i18n="nav_services" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Diensten</a>
+    <a href="#about" data-i18n="nav_about" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Over ons</a>
+    <a href="#gallery" data-i18n="nav_gallery" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Foto's</a>
+    <a href="#contact" data-i18n="nav_contact" class="block py-2.5 px-4 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-emerald-500 font-medium transition-colors">Contact</a>
+    <button type="button" data-modal-open="#pricingModal" data-i18n="nav_tarieven" class="w-full text-center bg-emerald-500 text-white py-3 rounded-xl font-bold shadow-md hover:bg-emerald-600 transition-colors">Tarieven</button>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if(menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+          mobileMenu.classList.remove('scale-y-95', 'opacity-0');
+          mobileMenu.classList.add('scale-y-100', 'opacity-100');
+        }, 10);
+        menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else {
+        mobileMenu.classList.add('scale-y-95', 'opacity-0');
+        mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+        menuBtn.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+      }
+    });
+  }
+</script>
+      
+        <a href="https://wa.me/31624545080" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#20ba5a] hover:scale-110 active:scale-95 transition-all duration-300 group" aria-label="Chat via WhatsApp">
+  <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:hidden"></span>
+  <i class="fa-brands fa-whatsapp text-3xl relative z-10"></i>
+</a>
+
+</body>
+</html>
         type="button"
         data-modal-open="#pricingModal"
         data-i18n="btn_prices">
