@@ -47,7 +47,17 @@
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+<div class="flex gap-2 items-center">
+  <button onclick="setLang('nl')" id="btn-nl"
+    class="px-3 py-1 border rounded text-sm">
+    NL
+  </button>
 
+  <button onclick="setLang('en')" id="btn-en"
+    class="px-3 py-1 border rounded text-sm">
+    EN
+  </button>
+</div>
     </div>
 
   </div>
@@ -56,13 +66,11 @@
 <!-- HERO -->
 <section class="pt-28 pb-20 text-center bg-gray-100 px-4">
 
-  <h1 class="text-3xl md:text-5xl font-bold">
-    Professional Cleaning Services
-  </h1>
+<h1 data-nl="Professionele schoonmaakdiensten"
+    data-en="Professional Cleaning Services"></h1>
 
-  <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-    Active in Maastricht, Limburg & surrounding areas
-  </p>
+<p data-nl="Actief in Maastricht en Limburg"
+   data-en="Active in Maastricht and Limburg"></p>
 
   <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
 
@@ -89,30 +97,31 @@
 
 <div class="card">
 <img src="home-cleaning.jpg">
-<h3>Home Cleaning</h3>
+<h3 data-nl="Woning schoonmaak" data-en="Home Cleaning"></h3>
 <p>€35/hour</p>
 </div>
 
 <div class="card">
 <img src="office-cleaning.jpg">
-<h3>Office Cleaning</h3>
+<h3 data-nl="Kantoor schoonmaak" data-en="Office Cleaning"></h
 <p>€40/hour</p>
 </div>
 
 <div class="card">
 <img src="deep-cleaning.jpg">
-<h3>Deep Cleaning</h3>
+<h3 data-nl="Deep Cleaning" data-en="Deep Cleaning"></h3>
 <p>€45/hour</p>
 </div>
 
 <div class="card">
 <img src="vve-cleaning.jpg">
-<h3>VvE Cleaning</h3>
+<h3 data-nl="VvE schoonmaak" data-en="VvE Cleaning"></h3>
 </div>
 
 <div class="card">
 <img src="moveout-cleaning.jpg">
-<h3>Move-out / Construction Cleaning</h3>
+<h3 data-nl="Oplevering / Bouwschoonmaak"
+    data-en="Move-out / Construction Cleaning"></h3>
 <p>€55/hour</p>
 </div>
 
