@@ -997,3 +997,7 @@ font-size:14px;
 font-weight:700;
 color:#16a34a;
 }
+.hero-bg h1,
+.hero-bg p {
+color: white !important;
+}
