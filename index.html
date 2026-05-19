@@ -16,6 +16,23 @@
 
 </head>
 
+<script>
+  let lang = localStorage.getItem("lang") || "nl";
+
+  function setLang(l){
+    lang = l;
+    localStorage.setItem("lang", l);
+
+    document.querySelectorAll("[data-nl]").forEach(el=>{
+      el.innerText = (lang === "nl") ? el.dataset.nl : el.dataset.en;
+    });
+  }
+
+  window.onload = () => setLang(lang);
+</script>
+
+</body>
+</html>
 <body class="bg-white text-gray-900">
 
 <!-- NAV -->
@@ -131,41 +148,46 @@ We provide professional cleaning services in Maastricht, Limburg and surrounding
 
 <!-- CONTACT -->
 <form action="https://api.web3forms.com/submit" method="POST"
-class="bg-white p-8 rounded-2xl shadow mt-10 space-y-5">
+class="bg-white p-8 rounded-2xl shadow space-y-5">
 
 <input type="hidden" name="access_key" value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
 
 <!-- NAME -->
-<input type="text" name="name" placeholder="Name" required
+<input type="text" name="name"
+placeholder="Naam / Name"
+required
 class="w-full p-4 border rounded-xl">
 
 <!-- EMAIL -->
-<input type="email" name="email" placeholder="Email" required
+<input type="email" name="email"
+placeholder="Email"
+required
 class="w-full p-4 border rounded-xl">
 
-<!-- SERVICE SELECT -->
-<select name="service" required class="w-full p-4 border rounded-xl bg-white">
+<!-- SERVICE -->
+<select name="service" required class="w-full p-4 border rounded-xl">
 
-  <option value="" disabled selected>Select Service</option>
+  <option value="">Kies service / Select service</option>
 
-  <option value="Home Cleaning">Home Cleaning</option>
-  <option value="Office Cleaning">Office Cleaning</option>
+  <option value="Woning schoonmaak">Woning / Home Cleaning</option>
+  <option value="Kantoor schoonmaak">Kantoor / Office Cleaning</option>
   <option value="Deep Cleaning">Deep Cleaning</option>
-  <option value="VvE Cleaning">VvE Cleaning</option>
-  <option value="Move-out / Construction Cleaning">Move-out / Construction Cleaning</option>
+  <option value="VvE schoonmaak">VvE Cleaning</option>
+  <option value="Oplevering / Bouwschoonmaak">Move-out / Construction</option>
 
 </select>
 
 <!-- MESSAGE -->
-<textarea name="message" placeholder="Message" required
+<textarea name="message"
+placeholder="Bericht / Message"
+required
 class="w-full p-4 border rounded-xl h-40"></textarea>
 
 <!-- BUTTON -->
-<button class="w-full bg-green-500 text-white py-4 rounded-xl font-semibold hover:bg-green-600 transition">
-Send Request
+<button class="w-full bg-green-500 text-white py-4 rounded-xl font-semibold">
+Offerte aanvragen / Send Request
 </button>
 
-</form>
 
 <!-- FOOTER -->
 <footer class="bg-black text-white text-center py-10">
