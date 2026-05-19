@@ -980,3 +980,27 @@ img {
 section {
   overflow-x: hidden;
 }
+section{
+overflow:hidden;
+}
+
+body{
+overflow-x:hidden;
+}
+
+.card img{
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.price{
+background:#dcfce7;
+padding:6px 12px;
+border-radius:999px;
+font-size:14px;
+font-weight:700;
+color:#16a34a;
+}
