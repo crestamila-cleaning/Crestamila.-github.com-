@@ -2,279 +2,573 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Crestamila Cleaning | Premium Schoonmaakdiensten</title>
+<title>Crestamila Cleaning | Professionele Schoonmaakdiensten</title>
 
-<meta name="description" content="Premium schoonmaakdiensten in Maastricht & Limburg. Woningen, kantoren, VvE en deep cleaning. Betrouwbaar, snel en professioneel." />
+<meta name="description" content="Professionele schoonmaakdiensten in Maastricht & Limburg voor woningen, kantoren, VvE en bouwschoonmaak."/>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
 <style>
-body { font-family: Inter, sans-serif; }
 
-/* Smooth animations */
-.card {
-  transition: all 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+html {
+scroll-behavior:smooth;
 }
 
-/* WhatsApp button */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 65px;
-  height: 65px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  z-index: 999;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  transition: 0.3s;
-}
-.whatsapp:hover {
-  transform: scale(1.1);
+body{
+font-family:Inter,sans-serif;
+background:#ffffff;
+color:#111827;
 }
 
-/* Section spacing */
-section { padding: 80px 20px; }
-
-.price {
-  background: #16a34a;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 12px;
+.card{
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+.price{
+background:#16a34a;
+color:white;
+padding:5px 12px;
+border-radius:999px;
+font-size:12px;
+}
+
+.hero-bg{
+background:
+linear-gradient(
+rgba(255,255,255,0.85),
+rgba(255,255,255,0.9)
+),
+url('hero-cleaning.jpg');
+background-size:cover;
+background-position:center;
+}
+
 </style>
 </head>
 
-<body class="bg-white text-gray-800">
+<body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
+
 <header class="fixed top-0 w-full bg-white shadow z-50">
-<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-bold text-xl">Crestamila Cleaning</h1>
+<div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+<h1 class="font-bold text-2xl">
+Crestamila Cleaning
+</h1>
 
 <nav class="hidden md:flex gap-6 text-sm">
-<a href="#services">Services</a>
-<a href="#work">Resultaten</a>
+
+<a href="#services">Diensten</a>
+<a href="#results">Resultaten</a>
 <a href="#reviews">Reviews</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
-</header>
-<!-- HERO -->
-<section class="pt-28 text-center bg-gradient-to-r from-green-50 to-gray-50">
 
-<h1 class="text-4xl md:text-5xl font-bold">
-Premium Schoonmaakdiensten in Maastricht & Limburg
+</header>
+
+<!-- HERO -->
+
+<section class="hero-bg min-h-screen flex items-center justify-center text-center px-4">
+
+<div>
+
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+
+Professionele<br>
+Schoonmaakdiensten
+
 </h1>
 
-<p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-Voor woningen, kantoren en bedrijven — professioneel, betrouwbaar en altijd perfect resultaat.
+<p class="mt-6 text-gray-700 max-w-2xl mx-auto text-lg">
+
+Professionele schoonmaak voor woningen,
+kantoren, VvE’s en bouwprojecten in Maastricht & Limburg.
+
 </p>
 
-<div class="mt-6 flex justify-center gap-4">
-<a href="#contact" class="bg-green-500 text-white px-6 py-3 rounded-full">
+<div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+
+<a href="#contact"
+class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg">
+
 Offerte aanvragen
+
 </a>
 
-<a href="https://wa.me/31624545080" class="bg-black text-white px-6 py-3 rounded-full">
+<a href="https://wa.me/31624545080"
+class="bg-black text-white px-8 py-4 rounded-full text-lg">
+
 WhatsApp
+
 </a>
+
 </div>
 
-<div class="mt-6 text-sm text-gray-500">
-✔ Eco-friendly • ✔ Snelle service • ✔ Top kwaliteit
+<div class="mt-8 text-gray-600 text-sm">
+
+✔ Betrouwbaar
+✔ Professioneel
+✔ Snelle service
+✔ Eco-friendly
+
+</div>
+
 </div>
 
 </section>
-
 <!-- SERVICES -->
-<section id="services" class="max-w-6xl mx-auto">
 
-<h2 class="text-3xl font-bold text-center mb-10">Onze Diensten</h2>
+<section id="services" class="py-24 px-4">
 
-<div class="grid md:grid-cols-3 gap-6">
+<div class="max-w-7xl mx-auto">
 
-<div class="bg-white shadow rounded-xl overflow-hidden card">
-<img src="home-cleaning.jpg" class="h-48 w-full object-cover">
-<div class="p-4 flex justify-between items-center">
-<h3 class="font-bold">Woning schoonmaak</h3>
+<h2 class="text-4xl font-bold text-center mb-14">
+
+Onze Diensten
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<!-- SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="home-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+Woning schoonmaak
+</h3>
+
 <span class="price">€30/u</span>
-</div>
+
 </div>
 
-<div class="bg-white shadow rounded-xl overflow-hidden card">
-<img src="office-cleaning.jpg" class="h-48 w-full object-cover">
-<div class="p-4 flex justify-between items-center">
-<h3 class="font-bold">Kantoor schoonmaak</h3>
+<p class="text-gray-600 mt-3 text-sm">
+
+Professionele schoonmaak van woningen en appartementen.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="office-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+Kantoor schoonmaak
+</h3>
+
 <span class="price">€40/u</span>
-</div>
+
 </div>
 
-<div class="bg-white shadow rounded-xl overflow-hidden card">
-<img src="deep-cleaning.jpg" class="h-48 w-full object-cover">
-<div class="p-4 flex justify-between items-center">
-<h3 class="font-bold">Deep Cleaning</h3>
+<p class="text-gray-600 mt-3 text-sm">
+
+Schone en professionele werkomgeving voor bedrijven.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="deep-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+Deep Cleaning
+</h3>
+
 <span class="price">€45/u</span>
-</div>
+
 </div>
 
-<div class="bg-white shadow rounded-xl overflow-hidden card">
-<img src="vve-cleaning.jpg" class="h-48 w-full object-cover">
-<div class="p-4 flex justify-between items-center">
-<h3 class="font-bold">VvE schoonmaak</h3>
+<p class="text-gray-600 mt-3 text-sm">
+
+Intensieve dieptereiniging voor maximale hygiëne.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="vve-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+VvE Schoonmaak
+</h3>
+
 <span class="price">€35/u</span>
-</div>
+
 </div>
 
-<div class="bg-white shadow rounded-xl overflow-hidden card">
-<img src="window-cleaning.jpg" class="h-48 w-full object-cover">
-<div class="p-4 flex justify-between items-center">
-<h3 class="font-bold">Glazenwasser</h3>
+<p class="text-gray-600 mt-3 text-sm">
+
+Onderhoud en reiniging van appartementencomplexen.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="window-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+Glazenwasser
+</h3>
+
 <span class="price">€35/u</span>
+
 </div>
+
+<p class="text-gray-600 mt-3 text-sm">
+
+Professionele glasbewassing voor woningen en bedrijven.
+
+</p>
+
 </div>
 
 </div>
+
+<!-- NEW SERVICE -->
+
+<div class="bg-white rounded-2xl overflow-hidden shadow card">
+
+<img src="bouw-cleaning.jpg"
+class="h-56 w-full object-cover">
+
+<div class="p-5">
+
+<div class="flex justify-between items-center">
+
+<h3 class="font-bold text-lg">
+Oplevering / Bouwschoonmaak
+</h3>
+
+<span class="price">€50/u</span>
+
+</div>
+
+<p class="text-gray-600 mt-3 text-sm">
+
+Professionele reiniging na renovatie en bouwwerkzaamheden.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- WORK -->
-<section id="work" class="bg-gray-50 text-center">
+<!-- RESULTS -->
 
-<h2 class="text-3xl font-bold">Voor & Na Resultaten</h2>
-<p class="text-gray-500 mt-2">Echte resultaten van ons werk</p>
+<section id="results" class="bg-gray-50 py-24 px-4">
 
-<div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10">
+<div class="max-w-6xl mx-auto">
 
-<img src="gallery3.jpg" class="rounded-xl shadow">
-<img src="gallery4.jpg" class="rounded-xl shadow">
+<h2 class="text-4xl font-bold text-center">
+
+Voor & Na Resultaten
+
+</h2>
+
+<p class="text-center text-gray-600 mt-3">
+
+Echte resultaten van onze projecten
+
+</p>
+
+<div class="grid md:grid-cols-2 gap-8 mt-12">
+
+<img src="gallery1.jpg"
+class="rounded-2xl shadow">
+
+<img src="gallery2.jpg"
+class="rounded-2xl shadow">
 
 </div>
+
+</div>
+
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews" class="text-center">
 
-<h2 class="text-3xl font-bold">Klanten Reviews</h2>
+<section id="reviews" class="py-24 px-4">
 
-<div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+<div class="max-w-6xl mx-auto text-center">
 
-<div class="bg-white shadow p-6 rounded-xl card">
-“Super professioneel en altijd op tijd!”
+<h2 class="text-4xl font-bold">
+
+Wat klanten zeggen
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8 mt-12">
+
+<div class="bg-white p-8 rounded-2xl shadow card">
+
+<p>
+“Professioneel team en perfecte resultaten.”
+</p>
+
 </div>
 
-<div class="bg-white shadow p-6 rounded-xl card">
-“Ons kantoor is nog nooit zo schoon geweest.”
-</div>
+<div class="bg-white p-8 rounded-2xl shadow card">
 
-<div class="bg-white shadow p-6 rounded-xl card">
-“Betrouwbaar en snelle service.”
-</div>
+<p>
+“Ons kantoor ziet er fantastisch uit.”
+</p>
 
 </div>
+
+<div class="bg-white p-8 rounded-2xl shadow card">
+
+<p>
+“Betrouwbaar, snel en vriendelijk.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="bg-gray-50">
 
-<h2 class="text-3xl font-bold text-center">FAQ</h2>
+<section id="faq" class="bg-gray-50 py-24 px-4">
 
-<div class="max-w-3xl mx-auto mt-10 space-y-4">
+<div class="max-w-4xl mx-auto">
 
-<div class="bg-white p-4 rounded shadow">
-<strong>Hoe snel kunnen jullie starten?</strong>
-<p class="text-sm text-gray-600 mt-2">Meestal binnen 24–48 uur.</p>
+<h2 class="text-4xl font-bold text-center">
+
+Veelgestelde vragen
+
+</h2>
+
+<div class="space-y-6 mt-12">
+
+<div class="bg-white p-6 rounded-xl shadow">
+
+<h3 class="font-bold">
+Hoe snel kunnen jullie starten?
+</h3>
+
+<p class="text-gray-600 mt-2">
+Meestal binnen 24 tot 48 uur.
+</p>
+
 </div>
 
-<div class="bg-white p-4 rounded shadow">
-<strong>Werken jullie met vaste prijzen?</strong>
-<p class="text-sm text-gray-600 mt-2">We werken met transparante uurtarieven.</p>
+<div class="bg-white p-6 rounded-xl shadow">
+
+<h3 class="font-bold">
+Werken jullie met vaste prijzen?
+</h3>
+
+<p class="text-gray-600 mt-2">
+Wij werken met transparante tarieven.
+</p>
+
 </div>
 
-<div class="bg-white p-4 rounded shadow">
-<strong>Is jullie service betrouwbaar?</strong>
-<p class="text-sm text-gray-600 mt-2">Ja, wij werken professioneel en discreet.</p>
+<div class="bg-white p-6 rounded-xl shadow">
+
+<h3 class="font-bold">
+Werken jullie ook in weekends?
+</h3>
+
+<p class="text-gray-600 mt-2">
+Ja, wij zijn flexibel beschikbaar.
+</p>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
-<!-- FAQ -->
-<section id="faq" class="bg-gray-50">
-
-<h2 class="text-3xl font-bold text-center">FAQ</h2>
-
-<div class="max-w-3xl mx-auto mt-10 space-y-4">
-
-<div class="bg-white p-4 rounded shadow">
-<strong>Hoe snel kunnen jullie starten?</strong>
-<p class="text-sm text-gray-600 mt-2">Meestal binnen 24–48 uur.</p>
-</div>
-
-<div class="bg-white p-4 rounded shadow">
-<strong>Werken jullie met vaste prijzen?</strong>
-<p class="text-sm text-gray-600 mt-2">We werken met transparante uurtarieven.</p>
-</div>
-
-<div class="bg-white p-4 rounded shadow">
-<strong>Is jullie service betrouwbaar?</strong>
-<p class="text-sm text-gray-600 mt-2">Ja, wij werken professioneel en discreet.</p>
-</div>
-
-</div>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="max-w-3xl mx-auto">
 
-<h2 class="text-3xl font-bold mb-6">Offerte aanvragen</h2>
+<section id="contact" class="py-24 px-4">
 
-<form action="https://formsubmit.co/crestamila.cleaning@gmail.com" method="POST" class="space-y-4">
+<div class="max-w-3xl mx-auto">
 
-<input type="hidden" name="_captcha" value="false">
+<h2 class="text-4xl font-bold mb-10 text-center">
 
-<input class="w-full border p-3 rounded" name="name" placeholder="Naam" required>
-<input class="w-full border p-3 rounded" name="phone" placeholder="Telefoon" required>
+Offerte aanvragen
 
-<select class="w-full border p-3 rounded" name="service">
+</h2>
+
+<form action="https://api.web3forms.com/submit"
+method="POST"
+class="space-y-5">
+
+<input type="hidden"
+name="access_key"
+value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
+
+<input
+class="w-full border p-4 rounded-xl"
+type="text"
+name="name"
+placeholder="Naam"
+required>
+
+<input
+class="w-full border p-4 rounded-xl"
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input
+class="w-full border p-4 rounded-xl"
+type="text"
+name="phone"
+placeholder="Telefoon">
+
+<select
+class="w-full border p-4 rounded-xl"
+name="service">
+
 <option>Woning schoonmaak</option>
 <option>Kantoor schoonmaak</option>
 <option>Deep Cleaning</option>
-<option>VvE schoonmaak</option>
+<option>VvE Schoonmaak</option>
 <option>Glazenwasser</option>
+<option>Oplevering / Bouwschoonmaak</option>
+
 </select>
 
-<textarea class="w-full border p-3 rounded" name="message" placeholder="Bericht"></textarea>
+<textarea
+class="w-full border p-4 rounded-xl"
+name="message"
+placeholder="Bericht"
+rows="5"
+required></textarea>
 
-<button class="bg-green-500 text-white w-full py-3 rounded">
+<button
+type="submit"
+class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl text-lg">
+
 Verstuur offerte
+
 </button>
 
 </form>
+
+</div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black text-white text-center py-10 mt-10">
+
+<footer class="bg-black text-white text-center py-10">
+
+<p>
 © 2026 Crestamila Cleaning
+</p>
+
 </footer>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/31624545080" class="whatsapp">
+
+<a href="https://wa.me/31624545080"
+class="whatsapp">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
 </body>
