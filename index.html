@@ -4,51 +4,87 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Crestamila Cleaning | Maastricht & Limburg</title>
+<title>Crestamila Cleaning | Premium Schoonmaakdiensten</title>
 
-<meta name="description" content="Professionele schoonmaakdiensten in Maastricht & Limburg. Woningen, kantoren en VvE's. Vraag direct een offerte aan." />
+<meta name="description" content="Premium schoonmaakdiensten in Maastricht & Limburg. Woningen, kantoren, VvE en deep cleaning. Betrouwbaar, snel en professioneel." />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
 <style>
 body { font-family: Inter, sans-serif; }
-.fade { transition: all .3s ease; }
-.card:hover { transform: translateY(-5px); }
+
+/* Smooth animations */
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* WhatsApp button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* Section spacing */
+section { padding: 80px 20px; }
+
+.price {
+  background: #16a34a;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
 </style>
 </head>
 
 <body class="bg-white text-gray-800">
 
 <!-- NAV -->
-<header class="fixed w-full top-0 bg-white shadow z-50">
+<header class="fixed top-0 w-full bg-white shadow z-50">
 <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-bold text-xl">Crestamila</h1>
+<h1 class="font-bold text-xl">Crestamila Cleaning</h1>
 
 <nav class="hidden md:flex gap-6 text-sm">
 <a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#work">Work</a>
+<a href="#work">Resultaten</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<div class="flex gap-2 text-sm">
-<button onclick="setLang('nl')">NL</button>
-<button onclick="setLang('en')">EN</button>
-</div>
-
 </div>
 </header>
-
 <!-- HERO -->
-<section class="pt-28 pb-20 bg-gradient-to-r from-green-50 to-gray-50 text-center">
-<h1 class="text-4xl md:text-5xl font-bold" data-i18n="hero_title">
-Professionele schoonmaak in Maastricht & Limburg
+<section class="pt-28 text-center bg-gradient-to-r from-green-50 to-gray-50">
+
+<h1 class="text-4xl md:text-5xl font-bold">
+Premium Schoonmaakdiensten in Maastricht & Limburg
 </h1>
 
-<p class="mt-4 text-gray-600 max-w-xl mx-auto" data-i18n="hero_sub">
-Betrouwbare schoonmaak voor woningen, kantoren en bedrijven.
+<p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+Voor woningen, kantoren en bedrijven — professioneel, betrouwbaar en altijd perfect resultaat.
 </p>
 
 <div class="mt-6 flex justify-center gap-4">
@@ -56,87 +92,154 @@ Betrouwbare schoonmaak voor woningen, kantoren en bedrijven.
 Offerte aanvragen
 </a>
 
-<a href="https://wa.me/31624545080" target="_blank"
-class="bg-black text-white px-6 py-3 rounded-full">
+<a href="https://wa.me/31624545080" class="bg-black text-white px-6 py-3 rounded-full">
 WhatsApp
 </a>
 </div>
 
-<div class="mt-8 text-sm text-gray-500">
-✔ Snelle service • ✔ Eco-producten • ✔ 100% betrouwbaar
+<div class="mt-6 text-sm text-gray-500">
+✔ Eco-friendly • ✔ Snelle service • ✔ Top kwaliteit
 </div>
+
 </section>
+
 <!-- SERVICES -->
-<section id="services" class="max-w-6xl mx-auto py-20 px-4">
+<section id="services" class="max-w-6xl mx-auto">
+
 <h2 class="text-3xl font-bold text-center mb-10">Onze Diensten</h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="bg-white shadow rounded-xl p-6 card fade">
+<div class="bg-white shadow rounded-xl overflow-hidden card">
+<img src="home-cleaning.jpg" class="h-48 w-full object-cover">
+<div class="p-4 flex justify-between items-center">
 <h3 class="font-bold">Woning schoonmaak</h3>
-<p class="text-sm text-gray-600 mt-2">Professionele schoonmaak voor huizen.</p>
+<span class="price">€30/u</span>
+</div>
 </div>
 
-<div class="bg-white shadow rounded-xl p-6 card fade">
+<div class="bg-white shadow rounded-xl overflow-hidden card">
+<img src="office-cleaning.jpg" class="h-48 w-full object-cover">
+<div class="p-4 flex justify-between items-center">
 <h3 class="font-bold">Kantoor schoonmaak</h3>
-<p class="text-sm text-gray-600 mt-2">Schone en productieve werkruimtes.</p>
+<span class="price">€40/u</span>
+</div>
 </div>
 
-<div class="bg-white shadow rounded-xl p-6 card fade">
-<h3 class="font-bold">Deep cleaning</h3>
-<p class="text-sm text-gray-600 mt-2">Diepe reiniging met resultaat.</p>
+<div class="bg-white shadow rounded-xl overflow-hidden card">
+<img src="deep-cleaning.jpg" class="h-48 w-full object-cover">
+<div class="p-4 flex justify-between items-center">
+<h3 class="font-bold">Deep Cleaning</h3>
+<span class="price">€45/u</span>
+</div>
+</div>
+
+<div class="bg-white shadow rounded-xl overflow-hidden card">
+<img src="vve-cleaning.jpg" class="h-48 w-full object-cover">
+<div class="p-4 flex justify-between items-center">
+<h3 class="font-bold">VvE schoonmaak</h3>
+<span class="price">€35/u</span>
+</div>
+</div>
+
+<div class="bg-white shadow rounded-xl overflow-hidden card">
+<img src="window-cleaning.jpg" class="h-48 w-full object-cover">
+<div class="p-4 flex justify-between items-center">
+<h3 class="font-bold">Glazenwasser</h3>
+<span class="price">€35/u</span>
+</div>
 </div>
 
 </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="bg-gray-50 py-20 text-center px-4">
+<!-- WORK -->
+<section id="work" class="bg-gray-50 text-center">
+
 <h2 class="text-3xl font-bold">Voor & Na Resultaten</h2>
+<p class="text-gray-500 mt-2">Echte resultaten van ons werk</p>
 
-<div class="max-w-4xl mx-auto mt-8 grid md:grid-cols-2 gap-6">
+<div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10">
 
-<img src="gallery3.jpg" class="rounded-xl shadow" />
-<img src="gallery4.jpg" class="rounded-xl shadow" />
+<img src="gallery3.jpg" class="rounded-xl shadow">
+<img src="gallery4.jpg" class="rounded-xl shadow">
 
 </div>
-
-<p class="text-gray-500 mt-6">
-Professionele resultaten zichtbaar in elke schoonmaak.
-</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 max-w-4xl mx-auto text-center px-4">
-<h2 class="text-3xl font-bold">Over ons</h2>
+<!-- REVIEWS -->
+<section id="reviews" class="text-center">
 
-<p class="mt-4 text-gray-600">
-Crestamila Cleaning is actief in Maastricht & Limburg en levert hoogwaardige schoonmaakdiensten met betrouwbaarheid en kwaliteit.
-</p>
+<h2 class="text-3xl font-bold">Klanten Reviews</h2>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+
+<div class="bg-white shadow p-6 rounded-xl card">
+“Super professioneel en altijd op tijd!”
+</div>
+
+<div class="bg-white shadow p-6 rounded-xl card">
+“Ons kantoor is nog nooit zo schoon geweest.”
+</div>
+
+<div class="bg-white shadow p-6 rounded-xl card">
+“Betrouwbaar en snelle service.”
+</div>
+
+</div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="bg-gray-50 py-20 px-4 text-center">
-<h2 class="text-3xl font-bold">Klanten zeggen</h2>
+<!-- FAQ -->
+<section id="faq" class="bg-gray-50">
 
-<div class="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center">FAQ</h2>
 
-<div class="bg-white p-6 rounded-xl shadow">
-"Super service en snelle communicatie!"
+<div class="max-w-3xl mx-auto mt-10 space-y-4">
+
+<div class="bg-white p-4 rounded shadow">
+<strong>Hoe snel kunnen jullie starten?</strong>
+<p class="text-sm text-gray-600 mt-2">Meestal binnen 24–48 uur.</p>
 </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-"Ons kantoor is altijd perfect schoon."
+<div class="bg-white p-4 rounded shadow">
+<strong>Werken jullie met vaste prijzen?</strong>
+<p class="text-sm text-gray-600 mt-2">We werken met transparante uurtarieven.</p>
 </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-"Zeer professioneel team."
+<div class="bg-white p-4 rounded shadow">
+<strong>Is jullie service betrouwbaar?</strong>
+<p class="text-sm text-gray-600 mt-2">Ja, wij werken professioneel en discreet.</p>
 </div>
 
 </div>
-  </section>
-  <!-- CONTACT -->
-<section id="contact" class="py-20 max-w-3xl mx-auto px-4">
+</section>
+<!-- FAQ -->
+<section id="faq" class="bg-gray-50">
+
+<h2 class="text-3xl font-bold text-center">FAQ</h2>
+
+<div class="max-w-3xl mx-auto mt-10 space-y-4">
+
+<div class="bg-white p-4 rounded shadow">
+<strong>Hoe snel kunnen jullie starten?</strong>
+<p class="text-sm text-gray-600 mt-2">Meestal binnen 24–48 uur.</p>
+</div>
+
+<div class="bg-white p-4 rounded shadow">
+<strong>Werken jullie met vaste prijzen?</strong>
+<p class="text-sm text-gray-600 mt-2">We werken met transparante uurtarieven.</p>
+</div>
+
+<div class="bg-white p-4 rounded shadow">
+<strong>Is jullie service betrouwbaar?</strong>
+<p class="text-sm text-gray-600 mt-2">Ja, wij werken professioneel en discreet.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-3xl mx-auto">
 
 <h2 class="text-3xl font-bold mb-6">Offerte aanvragen</h2>
 
@@ -145,18 +248,19 @@ Crestamila Cleaning is actief in Maastricht & Limburg en levert hoogwaardige sch
 <input type="hidden" name="_captcha" value="false">
 
 <input class="w-full border p-3 rounded" name="name" placeholder="Naam" required>
-
 <input class="w-full border p-3 rounded" name="phone" placeholder="Telefoon" required>
 
 <select class="w-full border p-3 rounded" name="service">
 <option>Woning schoonmaak</option>
 <option>Kantoor schoonmaak</option>
-<option>Deep cleaning</option>
+<option>Deep Cleaning</option>
+<option>VvE schoonmaak</option>
+<option>Glazenwasser</option>
 </select>
 
 <textarea class="w-full border p-3 rounded" name="message" placeholder="Bericht"></textarea>
 
-<button class="w-full bg-green-500 text-white py-3 rounded">
+<button class="bg-green-500 text-white w-full py-3 rounded">
 Verstuur offerte
 </button>
 
@@ -164,38 +268,14 @@ Verstuur offerte
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black text-white text-center py-10">
+<footer class="bg-black text-white text-center py-10 mt-10">
 © 2026 Crestamila Cleaning
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/31624545080"
-class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg text-2xl">
-💬
+<!-- WHATSAPP -->
+<a href="https://wa.me/31624545080" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
 </a>
-
-<!-- LANGUAGE -->
-<script>
-const translations = {
-nl: {
-hero_title: "Professionele schoonmaak in Maastricht & Limburg",
-hero_sub: "Betrouwbare schoonmaak voor woningen, kantoren en bedrijven"
-},
-en: {
-hero_title: "Professional cleaning in Maastricht & Limburg",
-hero_sub: "Reliable cleaning for homes, offices and companies"
-}
-};
-
-function setLang(lang){
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-const key = el.getAttribute("data-i18n");
-if(translations[lang] && translations[lang][key]){
-el.innerText = translations[lang][key];
-}
-});
-}
-</script>
 
 </body>
 </html>
