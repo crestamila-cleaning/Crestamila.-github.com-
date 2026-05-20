@@ -1,455 +1,569 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Crestamila Cleaning | Maastricht & Limburg</title>
+<title>Crestamila Cleaning | Maastricht & Limburg</title>
 
-  <meta name="description"
-        content="Professionele schoonmaakdiensten in Maastricht en Limburg. Woning schoonmaak, deep cleaning, bouwschoonmaak, kantoor schoonmaak en meer."/>
+<meta name="description"
+content="Professionele schoonmaakdiensten in Maastricht & Limburg. Woning schoonmaak, deep cleaning, kantoor schoonmaak, bouwschoonmaak en meer."/>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-  <style>
+<style>
 
-    html{
-      scroll-behavior:smooth;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    body{
-      overflow-x:hidden;
-      font-family:Arial,sans-serif;
-    }
+body{
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+background:#f9fafb;
+}
 
-    .card{
-      overflow:hidden;
-      transition:.35s;
-      border-radius:20px;
-      background:#fff;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
+/* NAVBAR */
 
-    .card img{
-      transition:.4s;
-      width:100%;
-      height:250px;
-      object-fit:cover;
-    }
+.navbar{
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+}
 
-    .card:hover img{
-      transform:scale(1.05);
-    }
+/* HERO */
 
-    .hero-overlay{
-      background:rgba(0,0,0,.55);
-    }
+.hero-overlay{
+background:rgba(0,0,0,.55);
+}
 
-    .whatsapp-float{
-      position:fixed;
-      width:60px;
-      height:60px;
-      bottom:25px;
-      right:25px;
-      background:#25D366;
-      color:#fff;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:30px;
-      z-index:999;
-      box-shadow:0 10px 25px rgba(0,0,0,.2);
-    }
+/* CARDS */
 
-    .gallery img{
-      width:100%;
-      height:280px;
-      object-fit:cover;
-      border-radius:18px;
-    }
+.card{
+background:#fff;
+border-radius:22px;
+overflow:hidden;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-  </style>
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+/* GALLERY */
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:18px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:22px;
+right:22px;
+width:62px;
+height:62px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:#fff;
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* MOBILE FIX */
+
+img{
+max-width:100%;
+display:block;
+}
+
+section{
+overflow:hidden;
+}
+
+</style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
 
 <!-- NAVBAR -->
-<nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="navbar fixed top-0 left-0 w-full shadow-sm z-50">
 
-    <div class="flex justify-between items-center h-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- LOGO -->
-      <div class="flex-shrink-0 flex items-center">
-        <a href="#"
-           class="text-2xl font-bold tracking-wider text-gray-800 flex items-center gap-2">
+<div class="flex justify-between items-center h-20">
 
-          <span class="text-emerald-500">
-            <i class="fa-solid fa-sparkles"></i>
-          </span>
+<!-- LOGO -->
 
-          CRESTAMILA
-        </a>
-      </div>
+<div class="flex items-center">
 
-      <!-- DESKTOP MENU -->
-      <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+<a href="#"
+class="flex items-center gap-3 text-2xl font-bold tracking-wide text-gray-800">
 
-        <a href="#services"
-           class="hover:text-emerald-500"
-           data-nl="Diensten"
-           data-en="Services"></a>
+<img src="logo.png"
+alt="Crestamila Logo"
+class="h-11 w-auto">
 
-        <a href="#about"
-           class="hover:text-emerald-500"
-           data-nl="Over ons"
-           data-en="About"></a>
+<span>CRESTAMILA</span>
 
-        <a href="#gallery"
-           class="hover:text-emerald-500"
-           data-nl="Foto's"
-           data-en="Gallery"></a>
+</a>
 
-        <a href="#contact"
-           class="hover:text-emerald-500"
-           data-nl="Contact"
-           data-en="Contact"></a>
+</div>
 
-        <!-- LANG -->
-        <div class="flex gap-2 items-center border-l pl-4">
+<!-- DESKTOP MENU -->
 
-          <button onclick="setLang('nl')"
-                  id="btn-nl"
-                  class="font-bold text-sm">
-            NL
-          </button>
+<div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
 
-          <span>|</span>
+<a href="#services"
+class="hover:text-emerald-500 transition"
+data-nl="Diensten"
+data-en="Services"></a>
 
-          <button onclick="setLang('en')"
-                  id="btn-en"
-                  class="font-bold text-sm text-gray-400">
-            EN
-          </button>
+<a href="#about"
+class="hover:text-emerald-500 transition"
+data-nl="Over ons"
+data-en="About"></a>
 
-        </div>
+<a href="#gallery"
+class="hover:text-emerald-500 transition"
+data-nl="Foto's"
+data-en="Gallery"></a>
 
-      </div>
-!-- MOBILE -->
-      <div class="md:hidden flex items-center gap-4">
+<a href="#contact"
+class="hover:text-emerald-500 transition"
+data-nl="Contact"
+data-en="Contact"></a>
 
-        <button onclick="setLang('nl')" id="mobile-nl"
-                class="font-bold text-sm">
-          NL
-        </button>
+<div class="flex gap-2 items-center border-l pl-4">
 
-        <button onclick="setLang('en')" id="mobile-en"
-                class="font-bold text-sm text-gray-400">
-          EN
-        </button>
+<button onclick="setLang('nl')"
+id="btn-nl"
+class="font-bold text-sm text-emerald-500">
+NL
+</button>
 
-        <button id="mobile-menu-btn"
-                class="text-2xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+<span class="text-gray-300">|</span>
 
-      </div>
+<button onclick="setLang('en')"
+id="btn-en"
+class="font-bold text-sm text-gray-400">
+EN
+</button>
 
-    </div>
+</div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu"
-         class="hidden md:hidden pb-6 space-y-4 text-center">
+</div>
+<!-- MOBILE -->
 
-      <a href="#services"
-         class="block"
-         data-nl="Diensten"
-         data-en="Services"></a>
+<div class="md:hidden flex items-center gap-4">
 
-      <a href="#about"
-         class="block"
-         data-nl="Over ons"
-         data-en="About"></a>
+<button onclick="setLang('nl')"
+id="mobile-nl"
+class="font-bold text-sm text-emerald-500">
+NL
+</button>
 
-      <a href="#gallery"
-         class="block"
-         data-nl="Foto's"
-         data-en="Gallery"></a>
+<button onclick="setLang('en')"
+id="mobile-en"
+class="font-bold text-sm text-gray-400">
+EN
+</button>
 
-      <a href="#contact"
-         class="block"
-         data-nl="Contact"
-         data-en="Contact"></a>
+<button id="mobile-menu-btn"
+class="text-2xl text-gray-700">
 
-    </div>
+<i class="fa-solid fa-bars"></i>
 
-  </div>
+</button>
+
+</div>
+
+</div>
+
+<!-- MOBILE MENU -->
+
+<div id="mobile-menu"
+class="hidden md:hidden pb-6 text-center space-y-4">
+
+<a href="#services"
+class="block"
+data-nl="Diensten"
+data-en="Services"></a>
+
+<a href="#about"
+class="block"
+data-nl="Over ons"
+data-en="About"></a>
+
+<a href="#gallery"
+class="block"
+data-nl="Foto's"
+data-en="Gallery"></a>
+
+<a href="#contact"
+class="block"
+data-nl="Contact"
+data-en="Contact"></a>
+
+</div>
+
+</div>
 
 </nav>
 
 <!-- HERO -->
+
 <section class="relative h-screen flex items-center justify-center text-center text-white">
 
-  <img src="hero.jpg"
-       class="absolute inset-0 w-full h-full object-cover"/>
+<img src="home-cleaning.jpg"
+class="absolute inset-0 w-full h-full object-cover">
 
-  <div class="absolute inset-0 hero-overlay"></div>
+<div class="absolute inset-0 hero-overlay"></div>
 
-  <div class="relative z-10 px-6">
+<div class="relative z-10 px-6 max-w-4xl">
 
-    <h1 class="text-5xl md:text-7xl font-bold mb-6"
-        data-nl="Professionele Schoonmaakdiensten"
-        data-en="Professional Cleaning Services"></h1>
+<h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+data-nl="Professionele Schoonmaakdiensten"
+data-en="Professional Cleaning Services"></h1>
 
-    <p class="text-xl md:text-2xl mb-8"
-       data-nl="Actief in Maastricht & Limburg"
-       data-en="Active in Maastricht & Limburg"></p>
+<p class="text-xl md:text-2xl mb-10"
+data-nl="Actief in Maastricht & Limburg"
+data-en="Active in Maastricht & Limburg"></p>
 
-    <a href="#contact"
-       class="bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-full text-lg font-bold">
+<a href="#contact"
+class="bg-emerald-500 hover:bg-emerald-600 transition px-8 py-4 rounded-full text-lg font-bold shadow-lg">
 
-      <span data-nl="Offerte aanvragen"
-            data-en="Request Quote"></span>
+<span data-nl="Offerte aanvragen"
+data-en="Request Quote"></span>
 
-    </a>
+</a>
 
-  </div>
+</div>
 
 </section>
 
 <!-- SERVICES -->
+
 <section id="services" class="py-24 px-6">
 
-  <div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto">
 
-    <h2 class="text-4xl font-bold text-center mb-16"
-        data-nl="Onze Diensten"
-        data-en="Our Services"></h2>
+<h2 class="text-4xl font-bold text-center mb-16"
+data-nl="Onze Diensten"
+data-en="Our Services"></h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- SERVICE -->
-      <div class="card">
+<!-- SERVICE -->
 
-        <img src="home-cleaning.jpg">
+<div class="card">
 
-        <div class="p-6">
+<img src="home-cleaning.jpg">
 
-          <h3 class="text-2xl font-bold mb-3"
-              data-nl="Woning schoonmaak"
-              data-en="Home Cleaning"></h3>
+<div class="p-6">
 
-          <p class="text-gray-600 mb-4">
-            Complete professionele reiniging van woningen.
-          </p>
+<h3 class="text-2xl font-bold mb-3"
+data-nl="Woning schoonmaak"
+data-en="Home Cleaning"></h3>
 
-          <div class="text-emerald-500 font-bold">
-            Vanaf €35/u
-          </div>
+<p class="text-gray-600 mb-5">
+Professionele reiniging van woningen en appartementen.
+</p>
 
-        </div>
+<div class="text-emerald-500 font-bold">
+Vanaf €35/u
+</div>
 
-      </div>
+</div>
 
-      <!-- SERVICE -->
-      <div class="card">
+</div>
 
-        <img src="deep-cleaning.jpg">
+<!-- SERVICE -->
 
-        <div class="p-6">
+<div class="card">
 
-          <h3 class="text-2xl font-bold mb-3"
-              data-nl="Deep Cleaning"
-              data-en="Deep Cleaning"></h3>
+<img src="office-cleaning.jpg">
 
-          <p class="text-gray-600 mb-4">
-            Intensieve reiniging voor volledige hygiëne.
-          </p>
+<div class="p-6">
 
-          <div class="text-emerald-500 font-bold">
-            Vanaf €45/u
-          </div>
+<h3 class="text-2xl font-bold mb-3"
+data-nl="Kantoor schoonmaak"
+data-en="Office Cleaning"></h3>
 
-        </div>
+<p class="text-gray-600 mb-5">
+Professionele schoonmaak voor bedrijven en kantoren.
+</p>
 
-      </div>
+<div class="text-emerald-500 font-bold">
+Vanaf €40/u
+</div>
 
-      <!-- SERVICE -->
-      <div class="card">
+</div>
 
-        <img src="moveout-cleaning.jpg">
+</div>
 
-        <div class="p-6">
+<!-- SERVICE -->
 
-          <h3 class="text-2xl font-bold mb-3"
-              data-nl="Oplevering / Bouwschoonmaak"
-              data-en="Move-out / Construction Cleaning"></h3>
+<div class="card">
 
-          <p class="text-gray-600 mb-4">
-            Professionele schoonmaak na renovatie of verhuizing.
-          </p>
+<img src="deep-cleaning.jpg">
 
-          <div class="text-emerald-500 font-bold">
-            Op aanvraag
-          </div>
+<div class="p-6">
 
-        </div>
+<h3 class="text-2xl font-bold mb-3"
+data-nl="Deep Cleaning"
+data-en="Deep Cleaning"></h3>
 
-      </div>
+<p class="text-gray-600 mb-5">
+Dieptereiniging voor maximale hygiëne.
+</p>
 
-    </div>
+<div class="text-emerald-500 font-bold">
+Vanaf €45/u
+</div>
 
-  </div>
+</div>
+
+</div>
+
+<!-- SERVICE -->
+
+<div class="card">
+
+<img src="moveout-cleaning.jpg">
+
+<div class="p-6">
+
+<h3 class="text-2xl font-bold mb-3"
+data-nl="Oplevering / Bouwschoonmaak"
+data-en="Move-out / Construction Cleaning"></h3>
+
+<p class="text-gray-600 mb-5">
+Professionele schoonmaak na verbouwing of verhuizing.
+</p>
+
+<div class="text-emerald-500 font-bold">
+Op aanvraag
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRICE NOTE -->
+
+<div class="mt-16 text-center text-gray-500 text-sm">
+
+<span data-nl="* Prijzen zijn indicatief en afhankelijk van oppervlakte en situatie."
+data-en="* Prices are indicative and depend on size and condition."></span>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- ABOUT -->
+
 <section id="about" class="py-24 bg-white px-6">
 
-  <div class="max-w-5xl mx-auto text-center">
+<div class="max-w-5xl mx-auto text-center">
 
-    <h2 class="text-4xl font-bold mb-8"
-        data-nl="Over ons"
-        data-en="About Us"></h2>
+<h2 class="text-4xl font-bold mb-8"
+data-nl="Over ons"
+data-en="About Us"></h2>
 
-    <p class="text-lg text-gray-600 leading-relaxed"
-       data-nl="Crestamila Cleaning levert hoogwaardige schoonmaakdiensten in Maastricht en Limburg."
-       data-en="Crestamila Cleaning delivers premium cleaning services in Maastricht and Limburg.">
-    </p>
+<p class="text-lg leading-relaxed text-gray-600"
+data-nl="Crestamila Cleaning levert hoogwaardige schoonmaakdiensten in Maastricht en Limburg voor woningen, kantoren en bedrijven."
+data-en="Crestamila Cleaning delivers premium cleaning services in Maastricht and Limburg for homes, offices and businesses."></p>
 
-  </div>
+</div>
 
 </section>
 
 <!-- GALLERY -->
+
 <section id="gallery" class="py-24 px-6">
 
-  <div class="max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto">
 
-    <h2 class="text-4xl font-bold text-center mb-16"
-        data-nl="Foto's"
-        data-en="Gallery"></h2>
+<h2 class="text-4xl font-bold text-center mb-16"
+data-nl="Foto's"
+data-en="Gallery"></h2>
 
-    <div class="gallery grid md:grid-cols-3 gap-8">
+<div class="gallery grid md:grid-cols-3 gap-8">
 
-      <img src="gallery 3.jpg">
-      <img src="gallery 4.jpg">
-      <img src="gallery 6.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+<img src="gallery6.jpg">
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="py-24 bg-white px-6">
 
-  <div class="max-w-3xl mx-auto">
+<div class="max-w-3xl mx-auto">
 
-    <h2 class="text-4xl font-bold text-center mb-12"
-        data-nl="Contact opnemen"
-        data-en="Contact Us"></h2>
+<h2 class="text-4xl font-bold text-center mb-12"
+data-nl="Contact opnemen"
+data-en="Contact Us"></h2>
 
-    <form action="https://api.web3forms.com/submit"
-          method="POST"
-          class="space-y-6">
+<form action="https://api.web3forms.com/submit"
+method="POST"
+class="space-y-6">
 
-      <input type="hidden"
-             name="access_key"
-             value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
+<input type="hidden"
+name="access_key"
+value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
 
-      <input type="text"
-             name="name"
-             required
-             placeholder="Naam"
-             class="w-full border rounded-xl p-4">
+<input type="hidden"
+name="subject"
+value="Nieuwe offerte aanvraag">
 
-      <input type="email"
-             name="email"
-             required
-             placeholder="Email"
-             class="w-full border rounded-xl p-4">
+<input type="hidden"
+name="from_name"
+value="Crestamila Website">
 
-      <select name="service"
-              class="w-full border rounded-xl p-4">
+<input type="text"
+name="name"
+required
+placeholder="Naam"
+class="w-full border rounded-xl p-4">
 
-        <option>Home Cleaning</option>
-        <option>Deep Cleaning</option>
-        <option>Office Cleaning</option>
-        <option>Move-out Cleaning</option>
+<input type="email"
+name="email"
+required
+placeholder="Email"
+class="w-full border rounded-xl p-4">
 
-      </select>
+<select name="service"
+required
+class="w-full border rounded-xl p-4">
 
-      <textarea name="message"
-                rows="6"
-                required
-                placeholder="Bericht"
-                class="w-full border rounded-xl p-4"></textarea>
+<option value="">Select Service</option>
 
-      <button type="submit"
-              class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl w-full font-bold">
+<option>Home Cleaning</option>
+<option>Office Cleaning</option>
+<option>Deep Cleaning</option>
+<option>Move-out Cleaning</option>
 
-        Verzenden
+</select>
 
-      </button>
+<textarea name="message"
+rows="6"
+required
+placeholder="Bericht"
+class="w-full border rounded-xl p-4"></textarea>
 
-    </form>
+<button type="submit"
+class="w-full bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold py-4 rounded-xl">
 
-  </div>
+<span data-nl="Verzenden"
+data-en="Send Message"></span>
+
+</button>
+
+</form>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
+
 <footer class="bg-gray-900 text-white py-10 text-center">
 
-  <p>
-    © 2025 Crestamila Cleaning — Maastricht & Limburg
-  </p>
+<p>
+© 2025 Crestamila Cleaning — Maastricht & Limburg
+</p>
 
 </footer>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/31624545080"
-   class="whatsapp-float">
 
-  <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/31624545080"
+class="whatsapp-float">
+
+<i class="fab fa-whatsapp"></i>
 
 </a>
 
 <!-- SCRIPT -->
+
 <script>
 
-const mobileBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
+/* MOBILE MENU */
 
-mobileBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+const mobileBtn =
+document.getElementById("mobile-menu-btn");
+
+const mobileMenu =
+document.getElementById("mobile-menu");
+
+mobileBtn.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("hidden");
+
 });
+
+/* LANGUAGE */
 
 function setLang(lang){
 
-  localStorage.setItem("lang", lang);
+localStorage.setItem("lang",lang);
 
-  document.querySelectorAll("[data-nl]").forEach(el => {
+document.querySelectorAll("[data-nl]").forEach(el=>{
 
-    el.textContent =
-      lang === "nl"
-      ? el.dataset.nl
-      : el.dataset.en;
+el.textContent=
+lang==="nl"
+?el.dataset.nl
+:el.dataset.en;
 
-  });
+});
+
+document.getElementById("btn-nl").classList.toggle("text-emerald-500",lang==="nl");
+document.getElementById("btn-en").classList.toggle("text-emerald-500",lang==="en");
+
+document.getElementById("mobile-nl").classList.toggle("text-emerald-500",lang==="nl");
+document.getElementById("mobile-en").classList.toggle("text-emerald-500",lang==="en");
 
 }
 
-window.onload = () => {
+/* LOAD */
 
-  setLang(localStorage.getItem("lang") || "nl");
+window.onload=()=>{
+
+setLang(localStorage.getItem("lang")||"nl");
 
 };
 
