@@ -7,16 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#132621;
-    --paper:#F5F7F5;
-    --paper-2:#EAEFEA;
-    --teal:#1F6355;
-    --teal-deep:#12463C;
-    --gold:#C9A24B;
-    --line:#D3DBD6;
-    --white:#FFFFFF;
-  }
+  :root{--ink:#132621;--paper:#F5F7F5;--paper-2:#EAEFEA;--teal:#1F6355;--teal-deep:#12463C;--gold:#C9A24B;--line:#D3DBD6;--white:#FFFFFF;}
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
@@ -123,8 +114,7 @@
 </style>
 </head>
 <body>
-
-<header>
+  <header>
   <nav class="nav">
     <div class="brand"><img src="https://crestamilacleaning.nl/logo.png" alt="Crestamila Cleaning" style="height:34px;width:auto;"></div>
     <div class="navlinks">
@@ -167,24 +157,24 @@
     <div class="quote-card" id="offerte">
       <h3 data-i18n="form_title">Offerte aanvragen</h3>
       <div class="sub" data-i18n="form_sub">Vul uw gegevens in — geen verplichtingen, vrijblijvend advies.</div>
-      <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent=(currentLang==='nl'?'Verzonden ✓':'Sent ✓'); this.querySelector('.submit-btn').style.background='#12463C';">
+      <form onsubmit="event.preventDefault(); sendQuoteMail(this);">
         <div class="field">
           <label data-i18n="form_name">Naam</label>
-          <input type="text" data-i18n-ph="form_name_ph" placeholder="Uw volledige naam" required>
+          <input type="text" name="naam" data-i18n-ph="form_name_ph" placeholder="Uw volledige naam" required>
         </div>
         <div class="row2">
           <div class="field">
             <label data-i18n="form_email">E-mail</label>
-            <input type="email" placeholder="naam@voorbeeld.nl" required>
+            <input type="email" name="email" placeholder="naam@voorbeeld.nl" required>
           </div>
           <div class="field">
             <label data-i18n="form_phone">Telefoon</label>
-            <input type="tel" placeholder="06 12345678">
+            <input type="tel" name="telefoon" placeholder="06 12345678">
           </div>
         </div>
         <div class="field">
           <label data-i18n="form_type">Type dienst</label>
-          <select>
+          <select name="dienst">
             <option data-i18n="opt_home">Woning schoonmaak</option>
             <option data-i18n="opt_office">Kantoor schoonmaak</option>
             <option data-i18n="opt_deep">Dieptereiniging</option>
@@ -195,7 +185,7 @@
         </div>
         <div class="field">
           <label data-i18n="form_msg">Bericht (optioneel)</label>
-          <textarea data-i18n-ph="form_msg_ph" placeholder="Vertel kort over uw ruimte en wensen"></textarea>
+          <textarea name="bericht" data-i18n-ph="form_msg_ph" placeholder="Vertel kort over uw ruimte en wensen"></textarea>
         </div>
         <button class="submit-btn" type="submit" data-i18n="form_submit">Verstuur aanvraag</button>
       </form>
@@ -251,6 +241,7 @@
     </div>
   </div>
 </section>
+
 <section id="over-ons" class="about">
   <div class="wrap">
     <div class="about-grid">
@@ -301,9 +292,9 @@
       </div>
     </div>
   </div>
-</section>
+                                                         </section>
 
-<section id="gebied" class="coverage">
+  <section id="gebied" class="coverage">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow" data-i18n="area_eyebrow">Werkgebied</div>
@@ -351,13 +342,13 @@
       <div class="contact-form-card">
         <h3 style="margin-bottom:6px;" data-i18n="cf_title">Stuur een bericht</h3>
         <p style="color:#5B6B65; font-size:0.88rem; margin-bottom:20px;" data-i18n="cf_sub">Vrijblijvend, geen verplichtingen.</p>
-        <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent=(currentLang==='nl'?'Verzonden ✓':'Sent ✓');">
+        <form onsubmit="event.preventDefault(); sendContactMail(this);">
           <div class="row2">
-            <div class="field"><label data-i18n="cf_name">Naam</label><input type="text" required></div>
-            <div class="field"><label data-i18n="cf_email">E-mail</label><input type="email" required></div>
+            <div class="field"><label data-i18n="cf_name">Naam</label><input type="text" name="naam" required></div>
+            <div class="field"><label data-i18n="cf_email">E-mail</label><input type="email" name="email" required></div>
           </div>
-          <div class="field"><label data-i18n="cf_subject">Onderwerp</label><input type="text" data-i18n-ph="cf_subject_ph" placeholder="Bijv. offerte kantoorschoonmaak"></div>
-          <div class="field"><label data-i18n="cf_msg">Bericht</label><textarea required></textarea></div>
+          <div class="field"><label data-i18n="cf_subject">Onderwerp</label><input type="text" name="onderwerp" data-i18n-ph="cf_subject_ph" placeholder="Bijv. offerte kantoorschoonmaak"></div>
+          <div class="field"><label data-i18n="cf_msg">Bericht</label><textarea name="bericht" required></textarea></div>
           <button class="submit-btn" type="submit" data-i18n="cf_submit">Bericht versturen</button>
         </form>
       </div>
@@ -466,7 +457,8 @@ const translations = {
   cf_submit:{nl:"Bericht versturen",en:"Send message"},
   footer_text:{nl:"© 2026 Crestamila Cleaning · Maastricht &amp; Limburg · Geregistreerd en verzekerd bedrijf",en:"© 2026 Crestamila Cleaning · Maastricht &amp; Limburg · Registered and insured company"}
 };
-  let currentLang = 'nl';
+
+let currentLang = 'nl';
 function setLang(lang){
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -480,6 +472,41 @@ function setLang(lang){
     const key = el.getAttribute('data-i18n-ph');
     if(translations[key]) el.setAttribute('placeholder', translations[key][lang]);
   });
+}
+
+const OWNER_EMAIL = "Crestamilacleaning@gmail.com";
+
+function sendQuoteMail(form){
+  const naam = form.naam.value;
+  const email = form.email.value;
+  const telefoon = form.telefoon.value;
+  const dienst = form.dienst.value;
+  const bericht = form.bericht.value;
+  const subject = "Offerteaanvraag - " + naam;
+  const body =
+    "Naam: " + naam + "\n" +
+    "E-mail: " + email + "\n" +
+    "Telefoon: " + telefoon + "\n" +
+    "Type dienst: " + dienst + "\n" +
+    "Bericht: " + bericht;
+  window.location.href = "mailto:" + OWNER_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  const btn = form.querySelector('.submit-btn');
+  btn.textContent = (currentLang==='nl' ? 'Mail app geopend ✓' : 'Mail app opened ✓');
+  btn.style.background = '#12463C';
+}
+
+function sendContactMail(form){
+  const naam = form.naam.value;
+  const email = form.email.value;
+  const onderwerp = form.onderwerp.value || (currentLang==='nl' ? 'Bericht via website' : 'Message via website');
+  const bericht = form.bericht.value;
+  const body =
+    "Naam: " + naam + "\n" +
+    "E-mail: " + email + "\n\n" +
+    bericht;
+  window.location.href = "mailto:" + OWNER_EMAIL + "?subject=" + encodeURIComponent(onderwerp) + "&body=" + encodeURIComponent(body);
+  const btn = form.querySelector('.submit-btn');
+  btn.textContent = (currentLang==='nl' ? 'Mail app geopend ✓' : 'Mail app opened ✓');
 }
 </script>
 
