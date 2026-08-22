@@ -1,621 +1,486 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Schoonmaakbedrijf Maastricht | Crestamila Cleaning</title>
-
-<meta name="description"
-content="Professionele schoonmaakdiensten in Maastricht & Limburg. Woning schoonmaak, deep cleaning, kantoor schoonmaak, bouwschoonmaak en meer."/>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crestamila Cleaning | Schoonmaakbedrijf Maastricht &amp; Limburg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,sans-serif;
-overflow-x:hidden;
-background:#f9fafb;
-}
-
-/* NAVBAR */
-
-.navbar{
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-}
-
-/* HERO */
-
-.hero-overlay{
-background:rgba(0,0,0,.55);
-}
-
-/* CARDS */
-
-.card{
-background:#fff;
-border-radius:22px;
-overflow:hidden;
-transition:.35s;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-transition:.4s;
-}
-
-.card:hover img{
-transform:scale(1.05);
-}
-
-/* GALLERY */
-
-.gallery img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:18px;
-}
-
-/* WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:22px;
-right:22px;
-width:62px;
-height:62px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-color:#fff;
-z-index:999;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-/* MOBILE FIX */
-
-img{
-max-width:100%;
-display:block;
-}
-
-section{
-overflow:hidden;
-}
-
+  :root{
+    --ink:#132621;
+    --paper:#F5F7F5;
+    --paper-2:#EAEFEA;
+    --teal:#1F6355;
+    --teal-deep:#12463C;
+    --gold:#C9A24B;
+    --line:#D3DBD6;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;color:var(--teal-deep);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  button{font-family:inherit;cursor:pointer;}
+  .streak{position:relative;overflow:hidden;}
+  .streak::before{content:"";position:absolute;top:0; left:-10%;width:55%; height:100%;background:linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.10) 45%, transparent 60%);transform:skewX(-12deg);pointer-events:none;}
+  header{position:sticky; top:0; z-index:50;background:rgba(245,247,245,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto;gap:16px;}
+  .brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;letter-spacing:0.02em;color:var(--teal-deep);}
+  .navlinks{display:none;gap:24px;font-size:0.9rem;font-weight:500;}
+  .navlinks a{opacity:0.8;transition:opacity .2s;}
+  .navlinks a:hover{opacity:1;}
+  .nav-right{display:flex; align-items:center; gap:14px;}
+  .nav-cta{background:var(--teal); color:var(--white); padding:10px 20px;border-radius:100px; font-size:0.85rem; font-weight:600;border:none; display:none;}
+  .lang-switch{display:flex; border:1px solid var(--line); border-radius:100px; overflow:hidden; font-size:0.78rem; font-weight:700;}
+  .lang-switch button{padding:7px 12px; border:none; background:transparent; color:var(--teal-deep); opacity:0.5;}
+  .lang-switch button.active{background:var(--teal); color:var(--white); opacity:1;}
+  @media(min-width:760px){ .navlinks{display:flex;} .nav-cta{display:inline-block;} }
+  .hero{background:linear-gradient(170deg, rgba(18,70,60,0.88) 0%, rgba(31,99,85,0.88) 100%), url('https://crestamilacleaning.nl/hero-cleaning.jpg') center/cover no-repeat;color:var(--white);padding:72px 0 90px;position:relative;}
+  .hero .wrap{display:grid; gap:48px;}
+  @media(min-width:860px){ .hero .wrap{grid-template-columns:1.1fr 0.9fr; align-items:center;} }
+  .eyebrow{display:inline-flex; align-items:center; gap:8px;font-size:0.8rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;color:var(--gold); margin-bottom:18px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.2rem); color:var(--white); line-height:1.12; margin-bottom:20px;}
+  .hero p.lead{font-size:1.08rem; color:rgba(255,255,255,0.82); max-width:46ch; margin-bottom:32px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  .btn-primary{background:var(--gold); color:var(--teal-deep); font-weight:700;padding:15px 28px; border-radius:100px; border:none; font-size:0.96rem;box-shadow:0 8px 24px rgba(201,162,75,0.28);}
+  .trust-row{display:flex; flex-wrap:wrap; gap:22px; margin-top:40px; font-size:0.86rem; color:rgba(255,255,255,0.75);}
+  .trust-row .item{display:flex; align-items:center; gap:8px;}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .quote-card{background:var(--white); color:var(--ink);border-radius:20px; padding:30px;box-shadow:0 30px 60px rgba(0,0,0,0.25);}
+  .quote-card h3{font-size:1.15rem; margin-bottom:4px;}
+  .quote-card .sub{font-size:0.85rem; color:#5B6B65; margin-bottom:20px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:0.78rem; font-weight:600; margin-bottom:6px; color:#3B4B45;}
+  .field input, .field select, .field textarea{width:100%; border:1px solid var(--line); border-radius:10px; padding:11px 13px;font-family:inherit; font-size:0.92rem; background:var(--paper);}
+  .field textarea{resize:vertical; min-height:70px;}
+  .submit-btn{width:100%; background:var(--teal); color:var(--white); font-weight:700;padding:14px; border-radius:10px; border:none; font-size:0.95rem; margin-top:4px;}
+  .form-note{font-size:0.75rem; color:#7C8A85; margin-top:10px; text-align:center;}
+  section{padding:76px 0;}
+  .section-head{max-width:640px; margin:0 auto 44px; text-align:center;}
+  .section-head .eyebrow{color:var(--teal); justify-content:center;}
+  .section-head .eyebrow::before{background:var(--teal);}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);}
+  .section-head p{color:#4C5C56; margin-top:12px; font-size:1rem;}
+  .services-grid{display:grid; gap:20px; grid-template-columns:1fr;}
+  @media(min-width:640px){ .services-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:960px){ .services-grid{grid-template-columns:1fr 1fr 1fr;} }
+  .service-card{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:26px;transition:transform .2s, box-shadow .2s;}
+  .service-card:hover{transform:translateY(-3px); box-shadow:0 16px 30px rgba(19,38,33,0.08);}
+  .service-card h3{font-size:1.05rem; margin-bottom:8px; color:var(--teal-deep);}
+  .service-card p{font-size:0.9rem; color:#57685F; margin-bottom:14px;}
+  .price-tag{display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.03em; color:var(--gold); background:rgba(201,162,75,0.12); padding:5px 10px; border-radius:100px; margin-top:2px;}
+  .about{background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .about-grid{display:grid; gap:40px;}
+  @media(min-width:860px){ .about-grid{grid-template-columns:1fr 1fr; align-items:start;} }
+  .about-copy p{color:#41524C; margin-bottom:16px; font-size:0.98rem;}
+  .badge-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+  .badge{border:1px solid var(--line); border-radius:14px; padding:18px;background:var(--paper);}
+  .badge .num{font-family:'Fraunces',serif; font-size:1.6rem; color:var(--teal); font-weight:600;}
+  .badge .lbl{font-size:0.8rem; color:#5B6B65; margin-top:4px;}
+  .cred-list{list-style:none; margin-top:18px;}
+  .cred-list li{display:flex; gap:10px; align-items:flex-start; font-size:0.92rem; color:#3B4B45; margin-bottom:10px;}
+  .cred-list li::before{content:"✓"; color:var(--teal); font-weight:700;}
+  .reviews-grid{display:grid; gap:20px;}
+  @media(min-width:760px){ .reviews-grid{grid-template-columns:1fr 1fr;} }
+  .review-card{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:24px;}
+  .stars{color:var(--gold); font-size:0.95rem; margin-bottom:10px; letter-spacing:2px;}
+  .review-card p{font-size:0.94rem; color:#3B4B45; margin-bottom:14px;}
+  .reviewer{display:flex; align-items:center; gap:10px; font-size:0.85rem; font-weight:600; color:var(--teal-deep);}
+  .avatar{width:34px;height:34px;border-radius:50%; background:var(--paper-2); display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:var(--teal); font-weight:700;}
+  .review-empty{border:1.5px dashed var(--line); border-radius:16px; padding:30px; text-align:center; color:#7C8A85; font-size:0.88rem;}
+  .coverage{background:var(--teal-deep); color:var(--white);}
+  .coverage .section-head h2{color:var(--white);}
+  .coverage .section-head p{color:rgba(255,255,255,0.7);}
+  .coverage .eyebrow{color:var(--gold);}
+  .coverage .eyebrow::before{background:var(--gold);}
+  .city-chips{display:flex; flex-wrap:wrap; gap:12px; justify-content:center;}
+  .city-chip{border:1px solid rgba(255,255,255,0.22); border-radius:100px; padding:10px 20px;font-size:0.88rem; font-weight:600; color:rgba(255,255,255,0.9);}
+  .contact-grid{display:grid; gap:36px;}
+  @media(min-width:860px){ .contact-grid{grid-template-columns:0.9fr 1.1fr;} }
+  .contact-info h3{font-size:1.3rem; margin-bottom:14px;}
+  .contact-info p{color:#4C5C56; font-size:0.96rem; margin-bottom:22px;}
+  .contact-methods{display:flex; flex-direction:column; gap:14px;}
+  .contact-method{display:flex; align-items:center; gap:14px;border:1px solid var(--line); border-radius:14px; padding:16px 18px; background:var(--white);}
+  .contact-method .ic{width:38px;height:38px;border-radius:10px; background:var(--paper-2); display:flex;align-items:center;justify-content:center; color:var(--teal);}
+  .contact-method .t{font-size:0.75rem; color:#7C8A85;}
+  .contact-method .v{font-weight:600; font-size:0.92rem; color:var(--teal-deep);}
+  .contact-form-card{background:var(--white); border:1px solid var(--line); border-radius:20px; padding:30px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  footer{background:var(--ink); color:rgba(255,255,255,0.65); padding:40px 0; font-size:0.85rem;}
+  .foot-grid{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .foot-grid .brand{color:var(--white);}
+  .foot-legal{font-size:0.78rem; opacity:0.7;}
+  .wa-float{position:fixed; bottom:22px; left:22px; z-index:60;background:#25D366; color:#fff; width:60px;height:60px; border-radius:50%;display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,0.3);animation:wa-pulse 2.4s infinite;}
+  .wa-float svg{width:32px;height:32px;}
+  @keyframes wa-pulse{0%{box-shadow:0 10px 26px rgba(0,0,0,0.3), 0 0 0 0 rgba(37,211,102,0.5);}70%{box-shadow:0 10px 26px rgba(0,0,0,0.3), 0 0 0 14px rgba(37,211,102,0);}100%{box-shadow:0 10px 26px rgba(0,0,0,0.3), 0 0 0 0 rgba(37,211,102,0);}}
+  .btn-whatsapp{display:inline-flex; align-items:center; gap:10px;background:#25D366; color:#fff; font-weight:700;padding:14px 26px; border-radius:100px; border:none; font-size:0.96rem;}
+  .btn-whatsapp svg{width:20px;height:20px;}
 </style>
 </head>
-
-<body class="text-gray-800">
-
-<!-- NAVBAR -->
-
-<nav class="navbar fixed top-0 left-0 w-full shadow-sm z-50">
-
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-<div class="flex justify-between items-center h-20">
-
-<!-- LOGO -->
-
-<div class="flex items-center">
-
-<a href="#"
-class="flex items-center gap-3 text-2xl font-bold tracking-wide text-gray-800">
-
-<img src="logo.png"
-alt="Crestamila Logo"
-class="h-11 w-auto">
-
-<span>CRESTAMILA</span>
-
-</a>
-
-</div>
-
-<!-- DESKTOP MENU -->
-
-<div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-
-<a href="#services"
-class="hover:text-emerald-500 transition"
-data-nl="Diensten"
-data-en="Services"></a>
-
-<a href="#about"
-class="hover:text-emerald-500 transition"
-data-nl="Over ons"
-data-en="About"></a>
-
-<a href="#gallery"
-class="hover:text-emerald-500 transition"
-data-nl="Foto's"
-data-en="Gallery"></a>
-
-<a href="#contact"
-class="hover:text-emerald-500 transition"
-data-nl="Contact"
-data-en="Contact"></a>
-
-<div class="flex gap-2 items-center border-l pl-4">
-
-<button onclick="setLang('nl')"
-id="btn-nl"
-class="font-bold text-sm text-emerald-500">
-NL
-</button>
-
-<span class="text-gray-300">|</span>
-
-<button onclick="setLang('en')"
-id="btn-en"
-class="font-bold text-sm text-gray-400">
-EN
-</button>
-
-</div>
-
-</div>
-<!-- MOBILE -->
-
-<div class="md:hidden flex items-center gap-4">
-
-<button onclick="setLang('nl')"
-id="mobile-nl"
-class="font-bold text-sm text-emerald-500">
-NL
-</button>
-
-<button onclick="setLang('en')"
-id="mobile-en"
-class="font-bold text-sm text-gray-400">
-EN
-</button>
-
-<button id="mobile-menu-btn"
-class="text-2xl text-gray-700">
-
-<i class="fa-solid fa-bars"></i>
-
-</button>
-
-</div>
-
-</div>
-
-<!-- MOBILE MENU -->
-
-<div id="mobile-menu"
-class="hidden md:hidden pb-6 text-center space-y-4">
-
-<a href="#services"
-class="block"
-data-nl="Diensten"
-data-en="Services"></a>
-
-<a href="#about"
-class="block"
-data-nl="Over ons"
-data-en="About"></a>
-
-<a href="#gallery"
-class="block"
-data-nl="Foto's"
-data-en="Gallery"></a>
-
-<a href="#contact"
-class="block"
-data-nl="Contact"
-data-en="Contact"></a>
-
-</div>
-
-</div>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="relative h-screen flex items-center justify-center text-center text-white">
-<img src="hero-cleaning.jpg"
-class="absolute inset-0 w-full h-full object-cover">
-
-<div class="absolute inset-0 hero-overlay"></div>
-
-<div class="relative z-10 px-6 max-w-4xl">
-
-<h1 class="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 leading-tight px-2"
-data-nl="Professionele Schoonmaakdiensten"
-data-en="Professional Cleaning Services"></h1>
-
-<p class="text-xl md:text-2xl mb-10"
-data-nl="Actief in Maastricht & Limburg"
-data-en="Active in Maastricht & Limburg"></p>
-
-<a href="#contact"
-class="bg-emerald-500 hover:bg-emerald-600 transition px-8 py-4 rounded-full text-lg font-bold shadow-lg">
-
-<span data-nl="Offerte aanvragen"
-data-en="Request Quote"></span>
-
-</a>
-
-</div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services" class="py-24 px-6">
-
-<div class="max-w-7xl mx-auto">
-
-<h2 class="text-4xl font-bold text-center mb-16"
-data-nl="Onze Diensten"
-data-en="Our Services"></h2>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-<!-- SERVICE -->
-
-<div class="card">
-
-<img src="home-cleaning.jpg">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3"
-data-nl="Woning schoonmaak"
-data-en="Home Cleaning"></h3>
-
-<p class="text-gray-600 mb-5">
-Professionele reiniging van woningen en appartementen.
-</p>
-
-<div class="text-emerald-500 font-bold">
-Vanaf €35/u
-</div>
-
-</div>
-
-</div>
-
-<!-- SERVICE -->
-
-<div class="card">
-
-<img src="office-cleaning.jpg">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3"
-data-nl="Kantoor schoonmaak"
-data-en="Office Cleaning"></h3>
-
-<p class="text-gray-600 mb-5">
-Professionele schoonmaak voor bedrijven en kantoren.
-</p>
-
-<div class="text-emerald-500 font-bold">
-Vanaf €40/u
-</div>
-
-</div>
-
-</div>
-<!-- SERVICE -->
-
-<div class="card">
-
-<img src="vve-cleaning.jpg">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3"
-data-nl="VvE Schoonmaak"
-data-en="VvE Cleaning"></h3>
-
-<p class="text-gray-600 mb-5">
-Professionele reiniging voor appartementen en VvE gebouwen.
-</p>
-
-<div class="text-emerald-500 font-bold">
-Op aanvraag
-</div>
-
-</div>
-
-</div>
-<!-- SERVICE -->
-
-<div class="card">
-
-<img src="deep-cleaning.jpg">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3"
-data-nl="Deep Cleaning"
-data-en="Deep Cleaning"></h3>
-
-<p class="text-gray-600 mb-5">
-Dieptereiniging voor maximale hygiëne.
-</p>
-
-<div class="text-emerald-500 font-bold">
-Vanaf €45/u
-</div>
-
-</div>
-
-</div>
-
-<!-- SERVICE -->
-
-<div class="card">
-
-<img src="moveout-cleaning.jpg">
-
-<div class="p-6">
-
-<h3 class="text-2xl font-bold mb-3"
-data-nl="Oplevering / Bouwschoonmaak"
-data-en="Move-out / Construction Cleaning"></h3>
-
-<p class="text-gray-600 mb-5">
-Professionele schoonmaak na verbouwing of verhuizing.
-</p>
-
-<div class="text-emerald-500 font-bold">
-Op aanvraag
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- PRICE NOTE -->
-
-<div class="mt-16 text-center text-gray-500 text-sm">
-
-<span data-nl="* Prijzen zijn indicatief en afhankelijk van oppervlakte en situatie."
-data-en="* Prices are indicative and depend on size and condition."></span>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="py-24 bg-white px-6">
-  <div class="max-w-5xl mx-auto text-center">
-
-    <h2
-      class="text-4xl font-bold mb-8"
-      data-nl="Professioneel Schoonmaakbedrijf in Maastricht"
-      data-en="Professional Cleaning Company in Maastricht">
-Schoonmaakbedrijf Maastricht | Professionele Schoonmaakdiensten
-    </h2>
-
-    <p
-      class="text-lg text-gray-700 leading-relaxed"
-      data-nl="Crestamila Cleaning Service is een professioneel schoonmaakbedrijf in Maastricht en Limburg. Wij bieden betrouwbare schoonmaakdiensten voor woningen, kantoren, appartementencomplexen, gemeenschappelijke ruimtes en bedrijven. Met aandacht voor detail en een hoge kwaliteitsstandaard zorgen wij voor een schone, frisse en verzorgde omgeving. Onze diensten omvatten woning schoonmaak, kantoorschoonmaak, dieptereiniging, opleveringsschoonmaak en periodieke schoonmaak op maat. Wij werken met flexibele planningen, duidelijke afspraken en professionele schoonmaakproducten om de beste resultaten te garanderen. Bent u op zoek naar een betrouwbaar schoonmaakbedrijf in Maastricht? Dan staat Crestamila Cleaning Service voor u klaar."
-      data-en="Crestamila Cleaning Service is a professional cleaning company serving Maastricht and Limburg. We provide reliable cleaning services for homes, offices, apartment buildings, shared spaces and businesses. With attention to detail and high-quality standards, we create clean, fresh and well-maintained environments. Our services include house cleaning, office cleaning, deep cleaning, move-in and move-out cleaning, and recurring cleaning services. If you are looking for a reliable cleaning company in Maastricht, Crestamila Cleaning Service is ready to help.">
-      Crestamila Cleaning Service is een professioneel schoonmaakbedrijf in Maastricht en Limburg.
-    </p>
-
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand"><img src="https://crestamilacleaning.nl/logo.png" alt="Crestamila Cleaning" style="height:34px;width:auto;"></div>
+    <div class="navlinks">
+      <a href="#diensten" data-i18n="nav_services">Diensten</a>
+      <a href="#over-ons" data-i18n="nav_about">Over ons</a>
+      <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+      <a href="#gebied" data-i18n="nav_area">Werkgebied</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button id="btn-nl" onclick="setLang('nl')" class="active">NL</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#offerte" class="nav-cta" data-i18n="nav_cta">Gratis offerte</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero streak">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i18n="hero_eyebrow">Schoonmaakbedrijf · Maastricht &amp; Limburg</div>
+      <h1 data-i18n="hero_title">Een grondig schone ruimte, zonder dat u er zelf tijd in hoeft te steken.</h1>
+      <p class="lead" data-i18n="hero_lead">Crestamila Cleaning verzorgt betrouwbare schoonmaak voor woningen, kantoren en VvE's in Maastricht en omgeving. Vertel ons uw situatie — wij stellen een passende offerte voor u samen.</p>
+      <div class="hero-actions">
+        <a href="#offerte" class="btn-primary" data-i18n="hero_btn_quote">Vraag gratis offerte aan</a>
+        <a href="https://wa.me/31624545080" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.95-.3-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .42-.03.65.5.24.56.82 1.95.89 2.09.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+          <span data-i18n="hero_btn_whatsapp">WhatsApp direct</span>
+        </a>
+      </div>
+      <div class="trust-row">
+        <div class="item"><span class="dot"></span> <span data-i18n="trust_1">Geregistreerd &amp; verzekerd bedrijf</span></div>
+        <div class="item"><span class="dot"></span> <span data-i18n="trust_2">Flexibele planning</span></div>
+        <div class="item"><span class="dot"></span> <span data-i18n="trust_3">Reactie binnen 24 uur</span></div>
+      </div>
+    </div>
+
+    <div class="quote-card" id="offerte">
+      <h3 data-i18n="form_title">Offerte aanvragen</h3>
+      <div class="sub" data-i18n="form_sub">Vul uw gegevens in — geen verplichtingen, vrijblijvend advies.</div>
+      <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent=(currentLang==='nl'?'Verzonden ✓':'Sent ✓'); this.querySelector('.submit-btn').style.background='#12463C';">
+        <div class="field">
+          <label data-i18n="form_name">Naam</label>
+          <input type="text" data-i18n-ph="form_name_ph" placeholder="Uw volledige naam" required>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label data-i18n="form_email">E-mail</label>
+            <input type="email" placeholder="naam@voorbeeld.nl" required>
+          </div>
+          <div class="field">
+            <label data-i18n="form_phone">Telefoon</label>
+            <input type="tel" placeholder="06 12345678">
+          </div>
+        </div>
+        <div class="field">
+          <label data-i18n="form_type">Type dienst</label>
+          <select>
+            <option data-i18n="opt_home">Woning schoonmaak</option>
+            <option data-i18n="opt_office">Kantoor schoonmaak</option>
+            <option data-i18n="opt_deep">Dieptereiniging</option>
+            <option data-i18n="opt_moveout">Verhuisschoonmaak</option>
+            <option data-i18n="opt_vve">VvE / gemeenschappelijke ruimtes</option>
+            <option data-i18n="opt_other">Anders</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-i18n="form_msg">Bericht (optioneel)</label>
+          <textarea data-i18n-ph="form_msg_ph" placeholder="Vertel kort over uw ruimte en wensen"></textarea>
+        </div>
+        <button class="submit-btn" type="submit" data-i18n="form_submit">Verstuur aanvraag</button>
+      </form>
+      <div class="form-note" data-i18n="form_note">Of bel/app direct: +31 6 24545080</div>
+    </div>
   </div>
 </section>
-  <section class="py-20 bg-gray-50 px-6">
-  <div class="max-w-5xl mx-auto">
 
-<h2 class="text-3xl font-bold mb-6">
-  Onze Schoonmaakdiensten in Maastricht en Limburg
-</h2>
-
-    <p class="text-lg text-gray-700 leading-relaxed">
-  Bent u op zoek naar een professioneel schoonmaakbedrijf in Maastricht?
-  Crestamila Cleaning Service biedt hoogwaardige en betrouwbare schoonmaakdiensten voor
-  particulieren en bedrijven in Maastricht en Limburg. Wij verzorgen woning schoonmaak,
-  kantoorschoonmaak, dieptereiniging, schoonmaak van gemeenschappelijke ruimtes,
-  trappenhuizen en opleveringsschoonmaak.
-
-  Dankzij onze flexibele planning, professionele werkwijze en oog voor detail kiezen steeds
-  meer klanten voor ons als schoonmaakbedrijf in Maastricht en omgeving.
-
-  Wij werken voor huiseigenaren, huurders, verhuurders, VvE's en bedrijven die een
-  betrouwbare schoonmaakpartner zoeken. Onze schoonmaakdiensten zijn beschikbaar in
-  Maastricht, Meerssen, Valkenburg, Heerlen, Sittard, Geleen en omliggende plaatsen in Limburg.
-    </p>
-
+<section id="diensten">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="services_eyebrow">Diensten</div>
+      <h2 data-i18n="services_title">Voor elke ruimte de juiste aanpak</h2>
+      <p data-i18n="services_sub">Elke offerte wordt op maat gemaakt — geen vast tarief, wel een eerlijke prijs die past bij uw situatie.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/home-cleaning.jpg" alt="Woning schoonmaak" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s1_title">Woning schoonmaak</h3>
+        <p data-i18n="s1_desc">Vaste of periodieke schoonmaak van appartementen en huizen, afgestemd op uw ritme.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/office-cleaning.jpg" alt="Kantoor schoonmaak" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s2_title">Kantoor schoonmaak</h3>
+        <p data-i18n="s2_desc">Professionele schoonmaak buiten kantooruren, zodat het werk nooit wordt onderbroken.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/deep-cleaning.jpg" alt="Dieptereiniging" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s3_title">Dieptereiniging</h3>
+        <p data-i18n="s3_desc">Grondige reiniging tot in de details — ideaal voor seizoenswissel of speciale gelegenheden.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/moveout-cleaning.jpg" alt="Verhuisschoonmaak" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s4_title">Verhuisschoonmaak</h3>
+        <p data-i18n="s4_desc">Oplevering of intrek zonder zorgen — wij zorgen dat de ruimte volledig klaar is.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/gallery4.jpg" alt="Bouwschoonmaak" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s5_title">Bouwschoonmaak</h3>
+        <p data-i18n="s5_desc">Reiniging na verbouwing of nieuwbouw, inclusief stof- en resten­verwijdering.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+      <div class="service-card">
+        <img src="https://crestamilacleaning.nl/vve-cleaning.jpg" alt="VvE schoonmaak" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:16px;">
+        <h3 data-i18n="s6_title">VvE &amp; gemeenschappelijke ruimtes</h3>
+        <p data-i18n="s6_desc">Vaste onderhoudsschema's voor trappenhuizen, hallen en gedeelde voorzieningen.</p>
+        <span class="price-tag" data-i18n="price_tag">Prijs op offerte</span>
+      </div>
+    </div>
   </div>
-  </section>
-
-<!-- GALLERY -->
-
-<section id="gallery" class="py-24 px-6">
-
-<div class="max-w-7xl mx-auto">
-
-<h2 class="text-4xl font-bold text-center mb-16"
-data-nl="Foto's"
-data-en="Gallery"></h2>
-
-<div class="gallery grid md:grid-cols-3 gap-8">
-
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
-<img src="gallery6.jpg">
-
-</div>
-
-</div>
-
+</section>
+<section id="over-ons" class="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="eyebrow" style="color:var(--teal)" data-i18n="about_eyebrow">Over ons</div>
+        <h2 style="margin-bottom:16px;" data-i18n="about_title">Een lokaal team met oog voor detail</h2>
+        <p data-i18n="about_p1">Crestamila Cleaning is opgericht in Maastricht met één doel: schoonmaak die je kunt vertrouwen, zonder gedoe. We werken met een vaste, kleine ploeg — geen wisselende onderaannemers — zodat u altijd weet wie er over de vloer komt.</p>
+        <p data-i18n="about_p2">We zijn officieel geregistreerd, werken volgens de geldende hygiëne- en veiligheidsnormen, en zijn verzekerd tegen schade tijdens de uitvoering van onze diensten.</p>
+        <ul class="cred-list">
+          <li data-i18n="cred_1">Officieel geregistreerd en verzekerd bedrijf, zoals gebruikelijk in de sector</li>
+          <li data-i18n="cred_2">Aansprakelijkheidsverzekering voor bedrijven</li>
+          <li data-i18n="cred_3">Eigen materiaal en professionele producten</li>
+          <li data-i18n="cred_4">Vaste contactpersoon per klant</li>
+        </ul>
+      </div>
+      <div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+          <img src="https://crestamilacleaning.nl/gallery3.jpg" alt="Ons werk" style="width:100%;height:130px;object-fit:cover;border-radius:12px;">
+          <img src="https://crestamilacleaning.nl/gallery6.jpg" alt="Ons werk" style="width:100%;height:130px;object-fit:cover;border-radius:12px;">
+        </div>
+        <div class="badge-grid">
+          <div class="badge"><div class="num">Maastricht</div><div class="lbl" data-i18n="badge_1">Basis van waaruit wij werken</div></div>
+          <div class="badge"><div class="num">7</div><div class="lbl" data-i18n="badge_2">Gemeenten in werkgebied</div></div>
+          <div class="badge"><div class="num">24u</div><div class="lbl" data-i18n="badge_3">Reactietijd op aanvragen</div></div>
+          <div class="badge"><div class="num">100%</div><div class="lbl" data-i18n="badge_4">Verzekerde uitvoering</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact" class="py-24 bg-white px-6">
-
-<div class="max-w-3xl mx-auto">
-
-<h2 class="text-4xl font-bold text-center mb-12"
-data-nl="Contact opnemen"
-data-en="Contact Us"></h2>
-
-<form action="https://api.web3forms.com/submit"
-method="POST"
-class="space-y-6">
-
-<input type="hidden"
-name="access_key"
-value="a47db516-74d8-43b6-836d-ff6c8e2bdbe6">
-
-<input type="hidden"
-name="subject"
-value="Nieuwe offerte aanvraag">
-
-<input type="hidden"
-name="from_name"
-value="Crestamila Website">
-
-<input type="text"
-name="name"
-required
-placeholder="Naam"
-class="w-full border rounded-xl p-4">
-
-<input type="email"
-name="email"
-required
-placeholder="Email"
-class="w-full border rounded-xl p-4">
-
-<select name="service"
-required
-class="w-full border rounded-xl p-4">
-
-<option value="">Select Service</option>
-
-<option>Home Cleaning</option>
-<option>Office Cleaning</option>
-<option>Deep Cleaning</option>
-<option>Move-out Cleaning</option>
-<option>VvE Cleaning</option>
-</select>
-
-<textarea name="message"
-rows="6"
-required
-placeholder="Bericht"
-class="w-full border rounded-xl p-4"></textarea>
-
-<button type="submit"
-class="w-full bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold py-4 rounded-xl">
-
-<span data-nl="Verzenden"
-data-en="Send Message"></span>
-
-</button>
-
-</form>
-
-</div>
-
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="reviews_eyebrow">Ervaringen</div>
+      <h2 data-i18n="reviews_title">Wat klanten zeggen</h2>
+      <p data-i18n="reviews_sub">We bouwen ons klantenbestand nog uit — hieronder de eerste reactie, met ruimte voor meer.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="review_1">"Netjes, punctueel en heel zorgvuldig met onze spullen. Precies wat we zochten voor de vaste schoonmaak van ons pand."</p>
+        <div class="reviewer"><div class="avatar">K</div> <span data-i18n="review_1_name">Klant in Maastricht</span></div>
+      </div>
+      <div class="review-empty">
+        <span data-i18n="review_empty_1">Uw review kan hier staan.</span><br>
+        <a href="#contact" style="color:var(--teal); font-weight:700;" data-i18n="review_empty_2">Word één van onze eerste klanten →</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<section id="gebied" class="coverage">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="area_eyebrow">Werkgebied</div>
+      <h2 data-i18n="area_title">Actief in heel Limburg-Zuid</h2>
+      <p data-i18n="area_sub">Onze diensten zijn beschikbaar in de volgende plaatsen — staat uw gemeente er niet bij, vraag gerust of wij bij u kunnen komen.</p>
+    </div>
+    <div class="city-chips">
+      <span class="city-chip">Maastricht</span>
+      <span class="city-chip">Meerssen</span>
+      <span class="city-chip">Valkenburg</span>
+      <span class="city-chip">Heerlen</span>
+      <span class="city-chip">Sittard</span>
+      <span class="city-chip">Geleen</span>
+      <span class="city-chip" data-i18n="area_surroundings">Omstreken</span>
+    </div>
+  </div>
+</section>
 
-<footer class="bg-gray-900 text-white py-10 text-center">
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow" style="color:var(--teal)" data-i18n="contact_eyebrow">Contact</div>
+        <h3 data-i18n="contact_title">Liever direct contact?</h3>
+        <p data-i18n="contact_sub">Bel, app of mail ons — of vul het formulier hiernaast in en we nemen binnen 24 uur contact met u op.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="ic">📞</div>
+            <div><div class="t" data-i18n="cm_phone">Telefoon / WhatsApp</div><div class="v">+31 6 24545080</div></div>
+          </div>
+          <div class="contact-method">
+            <div class="ic">✉️</div>
+            <div><div class="t" data-i18n="cm_email">E-mail</div><div class="v">Crestamilacleaning@gmail.com</div></div>
+          </div>
+          <div class="contact-method">
+            <div class="ic">📍</div>
+            <div><div class="t" data-i18n="cm_area">Werkgebied</div><div class="v">Maastricht &amp; Limburg-Zuid</div></div>
+          </div>
+          <div class="contact-method">
+            <div class="ic">🕑</div>
+            <div><div class="t" data-i18n="cm_time">Reactietijd</div><div class="v" data-i18n="cm_time_v">Binnen 24 uur</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h3 style="margin-bottom:6px;" data-i18n="cf_title">Stuur een bericht</h3>
+        <p style="color:#5B6B65; font-size:0.88rem; margin-bottom:20px;" data-i18n="cf_sub">Vrijblijvend, geen verplichtingen.</p>
+        <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent=(currentLang==='nl'?'Verzonden ✓':'Sent ✓');">
+          <div class="row2">
+            <div class="field"><label data-i18n="cf_name">Naam</label><input type="text" required></div>
+            <div class="field"><label data-i18n="cf_email">E-mail</label><input type="email" required></div>
+          </div>
+          <div class="field"><label data-i18n="cf_subject">Onderwerp</label><input type="text" data-i18n-ph="cf_subject_ph" placeholder="Bijv. offerte kantoorschoonmaak"></div>
+          <div class="field"><label data-i18n="cf_msg">Bericht</label><textarea required></textarea></div>
+          <button class="submit-btn" type="submit" data-i18n="cf_submit">Bericht versturen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>
-© 2025 Crestamila Cleaning — Maastricht & Limburg
-</p>
-
+<footer>
+  <div class="wrap foot-grid">
+    <div class="brand">CRESTA<span style="color:var(--gold)">MILA</span> CLEANING</div>
+    <div class="foot-legal" data-i18n="footer_text">© 2026 Crestamila Cleaning · Maastricht &amp; Limburg · Geregistreerd en verzekerd bedrijf</div>
+  </div>
 </footer>
 
-<!-- WHATSAPP -->
-
-<a href="https://wa.me/31624545080"
-class="whatsapp-float">
-
-<i class="fab fa-whatsapp"></i>
-
+<a href="https://wa.me/31624545080" class="wa-float" title="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.95-.3-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .42-.03.65.5.24.56.82 1.95.89 2.09.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
 </a>
 
-<!-- SCRIPT -->
-
 <script>
-
-/* MOBILE MENU */
-
-const mobileBtn =
-document.getElementById("mobile-menu-btn");
-
-const mobileMenu =
-document.getElementById("mobile-menu");
-
-mobileBtn.addEventListener("click",()=>{
-
-mobileMenu.classList.toggle("hidden");
-
-});
-
-/* LANGUAGE */
-
-function setLang(lang){
-
-localStorage.setItem("lang",lang);
-
-document.querySelectorAll("[data-nl]").forEach(el=>{
-
-el.textContent=
-lang==="nl"
-?el.dataset.nl
-:el.dataset.en;
-
-});
-
-document.getElementById("btn-nl").classList.toggle("text-emerald-500",lang==="nl");
-document.getElementById("btn-en").classList.toggle("text-emerald-500",lang==="en");
-
-document.getElementById("mobile-nl").classList.toggle("text-emerald-500",lang==="nl");
-document.getElementById("mobile-en").classList.toggle("text-emerald-500",lang==="en");
-
-}
-
-/* LOAD */
-
-window.onload=()=>{
-
-setLang(localStorage.getItem("lang")||"nl");
-
+const translations = {
+  nav_services:{nl:"Diensten",en:"Services"},
+  nav_about:{nl:"Over ons",en:"About us"},
+  nav_reviews:{nl:"Reviews",en:"Reviews"},
+  nav_area:{nl:"Werkgebied",en:"Coverage area"},
+  nav_contact:{nl:"Contact",en:"Contact"},
+  nav_cta:{nl:"Gratis offerte",en:"Free quote"},
+  hero_eyebrow:{nl:"Schoonmaakbedrijf · Maastricht &amp; Limburg",en:"Cleaning company · Maastricht &amp; Limburg"},
+  hero_title:{nl:"Een grondig schone ruimte, zonder dat u er zelf tijd in hoeft te steken.",en:"A thoroughly clean space, without you having to spend your own time on it."},
+  hero_lead:{nl:"Crestamila Cleaning verzorgt betrouwbare schoonmaak voor woningen, kantoren en VvE's in Maastricht en omgeving. Vertel ons uw situatie — wij stellen een passende offerte voor u samen.",en:"Crestamila Cleaning provides reliable cleaning for homes, offices and VvE buildings in Maastricht and the surrounding area. Tell us your situation — we'll put together a quote that fits."},
+  hero_btn_quote:{nl:"Vraag gratis offerte aan",en:"Request a free quote"},
+  hero_btn_whatsapp:{nl:"WhatsApp direct",en:"WhatsApp us directly"},
+  trust_1:{nl:"Geregistreerd &amp; verzekerd bedrijf",en:"Registered &amp; insured company"},
+  trust_2:{nl:"Flexibele planning",en:"Flexible scheduling"},
+  trust_3:{nl:"Reactie binnen 24 uur",en:"Reply within 24 hours"},
+  form_title:{nl:"Offerte aanvragen",en:"Request a quote"},
+  form_sub:{nl:"Vul uw gegevens in — geen verplichtingen, vrijblijvend advies.",en:"Fill in your details — no obligations, free advice."},
+  form_name:{nl:"Naam",en:"Name"},
+  form_name_ph:{nl:"Uw volledige naam",en:"Your full name"},
+  form_email:{nl:"E-mail",en:"Email"},
+  form_phone:{nl:"Telefoon",en:"Phone"},
+  form_type:{nl:"Type dienst",en:"Type of service"},
+  opt_home:{nl:"Woning schoonmaak",en:"Home cleaning"},
+  opt_office:{nl:"Kantoor schoonmaak",en:"Office cleaning"},
+  opt_deep:{nl:"Dieptereiniging",en:"Deep cleaning"},
+  opt_moveout:{nl:"Verhuisschoonmaak",en:"Move-out cleaning"},
+  opt_vve:{nl:"VvE / gemeenschappelijke ruimtes",en:"VvE / shared spaces"},
+  opt_other:{nl:"Anders",en:"Other"},
+  form_msg:{nl:"Bericht (optioneel)",en:"Message (optional)"},
+  form_msg_ph:{nl:"Vertel kort over uw ruimte en wensen",en:"Briefly describe your space and needs"},
+  form_submit:{nl:"Verstuur aanvraag",en:"Send request"},
+  form_note:{nl:"Of bel/app direct: +31 6 24545080",en:"Or call/message directly: +31 6 24545080"},
+  services_eyebrow:{nl:"Diensten",en:"Services"},
+  services_title:{nl:"Voor elke ruimte de juiste aanpak",en:"The right approach for every space"},
+  services_sub:{nl:"Elke offerte wordt op maat gemaakt — geen vast tarief, wel een eerlijke prijs die past bij uw situatie.",en:"Every quote is tailored — no fixed rate, but a fair price that fits your situation."},
+  s1_title:{nl:"Woning schoonmaak",en:"Home cleaning"},
+  s1_desc:{nl:"Vaste of periodieke schoonmaak van appartementen en huizen, afgestemd op uw ritme.",en:"Regular or one-off cleaning of apartments and houses, tailored to your schedule."},
+  s2_title:{nl:"Kantoor schoonmaak",en:"Office cleaning"},
+  s2_desc:{nl:"Professionele schoonmaak buiten kantooruren, zodat het werk nooit wordt onderbroken.",en:"Professional cleaning outside office hours, so your work is never interrupted."},
+  s3_title:{nl:"Dieptereiniging",en:"Deep cleaning"},
+  s3_desc:{nl:"Grondige reiniging tot in de details — ideaal voor seizoenswissel of speciale gelegenheden.",en:"Thorough cleaning down to the details — ideal for seasonal changes or special occasions."},
+  s4_title:{nl:"Verhuisschoonmaak",en:"Move-out cleaning"},
+  s4_desc:{nl:"Oplevering of intrek zonder zorgen — wij zorgen dat de ruimte volledig klaar is.",en:"Move-in or move-out without worries — we make sure the space is fully ready."},
+  s5_title:{nl:"Bouwschoonmaak",en:"Post-construction cleaning"},
+  s5_desc:{nl:"Reiniging na verbouwing of nieuwbouw, inclusief stof- en restenverwijdering.",en:"Cleaning after renovation or new construction, including dust and debris removal."},
+  s6_title:{nl:"VvE &amp; gemeenschappelijke ruimtes",en:"VvE &amp; shared spaces"},
+  s6_desc:{nl:"Vaste onderhoudsschema's voor trappenhuizen, hallen en gedeelde voorzieningen.",en:"Fixed maintenance schedules for stairwells, halls and shared facilities."},
+  price_tag:{nl:"Prijs op offerte",en:"Price on request"},
+  about_eyebrow:{nl:"Over ons",en:"About us"},
+  about_title:{nl:"Een lokaal team met oog voor detail",en:"A local team with an eye for detail"},
+  about_p1:{nl:"Crestamila Cleaning is opgericht in Maastricht met één doel: schoonmaak die je kunt vertrouwen, zonder gedoe. We werken met een vaste, kleine ploeg — geen wisselende onderaannemers — zodat u altijd weet wie er over de vloer komt.",en:"Crestamila Cleaning was founded in Maastricht with one goal: cleaning you can trust, without hassle. We work with a fixed, small team — no rotating subcontractors — so you always know who's coming in."},
+  about_p2:{nl:"We zijn officieel geregistreerd, werken volgens de geldende hygiëne- en veiligheidsnormen, en zijn verzekerd tegen schade tijdens de uitvoering van onze diensten.",en:"We are officially registered, work according to current hygiene and safety standards, and are insured against damage during our services."},
+  cred_1:{nl:"Officieel geregistreerd en verzekerd bedrijf, zoals gebruikelijk in de sector",en:"Officially registered and insured company, as is standard in the industry"},
+  cred_2:{nl:"Aansprakelijkheidsverzekering voor bedrijven",en:"Business liability insurance"},
+  cred_3:{nl:"Eigen materiaal en professionele producten",en:"Own equipment and professional products"},
+  cred_4:{nl:"Vaste contactpersoon per klant",en:"Dedicated contact person per client"},
+  badge_1:{nl:"Basis van waaruit wij werken",en:"Base from which we operate"},
+  badge_2:{nl:"Gemeenten in werkgebied",en:"Municipalities covered"},
+  badge_3:{nl:"Reactietijd op aanvragen",en:"Response time on requests"},
+  badge_4:{nl:"Verzekerde uitvoering",en:"Insured service"},
+  reviews_eyebrow:{nl:"Ervaringen",en:"Reviews"},
+  reviews_title:{nl:"Wat klanten zeggen",en:"What clients say"},
+  reviews_sub:{nl:"We bouwen ons klantenbestand nog uit — hieronder de eerste reactie, met ruimte voor meer.",en:"We're still growing our client base — here's our first review, with room for more."},
+  review_1:{nl:'"Netjes, punctueel en heel zorgvuldig met onze spullen. Precies wat we zochten voor de vaste schoonmaak van ons pand."',en:'"Tidy, punctual and very careful with our belongings. Exactly what we were looking for for the regular cleaning of our building."'},
+  review_1_name:{nl:"Klant in Maastricht",en:"Client in Maastricht"},
+  review_empty_1:{nl:"Uw review kan hier staan.",en:"Your review could be here."},
+  review_empty_2:{nl:"Word één van onze eerste klanten →",en:"Become one of our first clients →"},
+  area_eyebrow:{nl:"Werkgebied",en:"Coverage area"},
+  area_title:{nl:"Actief in heel Limburg-Zuid",en:"Active throughout South Limburg"},
+  area_sub:{nl:"Onze diensten zijn beschikbaar in de volgende plaatsen — staat uw gemeente er niet bij, vraag gerust of wij bij u kunnen komen.",en:"Our services are available in the following towns — if your municipality isn't listed, just ask whether we can come to you."},
+  area_surroundings:{nl:"Omstreken",en:"Surrounding areas"},
+  contact_eyebrow:{nl:"Contact",en:"Contact"},
+  contact_title:{nl:"Liever direct contact?",en:"Prefer direct contact?"},
+  contact_sub:{nl:"Bel, app of mail ons — of vul het formulier hiernaast in en we nemen binnen 24 uur contact met u op.",en:"Call, message or email us — or fill in the form and we'll get back to you within 24 hours."},
+  cm_phone:{nl:"Telefoon / WhatsApp",en:"Phone / WhatsApp"},
+  cm_email:{nl:"E-mail",en:"Email"},
+  cm_area:{nl:"Werkgebied",en:"Coverage area"},
+  cm_time:{nl:"Reactietijd",en:"Response time"},
+  cm_time_v:{nl:"Binnen 24 uur",en:"Within 24 hours"},
+  cf_title:{nl:"Stuur een bericht",en:"Send a message"},
+  cf_sub:{nl:"Vrijblijvend, geen verplichtingen.",en:"No strings attached, no obligations."},
+  cf_name:{nl:"Naam",en:"Name"},
+  cf_email:{nl:"E-mail",en:"Email"},
+  cf_subject:{nl:"Onderwerp",en:"Subject"},
+  cf_subject_ph:{nl:"Bijv. offerte kantoorschoonmaak",en:"E.g. office cleaning quote"},
+  cf_msg:{nl:"Bericht",en:"Message"},
+  cf_submit:{nl:"Bericht versturen",en:"Send message"},
+  footer_text:{nl:"© 2026 Crestamila Cleaning · Maastricht &amp; Limburg · Geregistreerd en verzekerd bedrijf",en:"© 2026 Crestamila Cleaning · Maastricht &amp; Limburg · Registered and insured company"}
 };
-
+  let currentLang = 'nl';
+function setLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.getElementById('btn-nl').classList.toggle('active', lang==='nl');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(translations[key]) el.innerHTML = translations[key][lang];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-ph');
+    if(translations[key]) el.setAttribute('placeholder', translations[key][lang]);
+  });
+}
 </script>
 
 </body>
